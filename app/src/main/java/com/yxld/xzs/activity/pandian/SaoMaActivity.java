@@ -13,6 +13,8 @@ import com.uuzuche.lib_zxing.activity.CaptureFragment;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.yxld.xzs.R;
 import com.yxld.xzs.base.BaseActivity;
+import com.yxld.xzs.utils.StringUitl;
+import com.yxld.xzs.utils.ToastUtil;
 import com.zhy.autolayout.AutoFrameLayout;
 
 import butterknife.BindView;
@@ -41,6 +43,7 @@ public class SaoMaActivity extends BaseActivity {
     private CaptureFragment captureFragment;
     private String pandianId; //盘点id
     private String tiaoXingMa;//条形码编号
+    private boolean isLight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,12 +86,25 @@ public class SaoMaActivity extends BaseActivity {
         Intent intent = null;
         switch (view.getId()) {
             case R.id.iv_shoudiantong:
+                isLight = !isLight;
+                if (isLight) {
+                    CodeUtils.isLightEnable(true);//开闪光灯
+                    mIvShoudiantong.setImageResource(R.mipmap.shoudiantong_on);
+
+                } else {
+                    CodeUtils.isLightEnable(false);//关闪光灯
+                    mIvShoudiantong.setImageResource(R.mipmap.shoudiantong_off);
+                }
                 break;
             case R.id.et_input:
                 mEtInput.setCursorVisible(true);
                 break;
             case R.id.tv_queding:
                 tiaoXingMa = mEtInput.getText().toString().trim();
+                if (!StringUitl.isNoEmpty(tiaoXingMa)){
+                    ToastUtil.showToast(this,"请扫描条形码或输入条形码");
+                    return;
+                }
                 intent = new Intent(this, PanDianDetailActivity.class);
                 intent.putExtra("wuziBianhao", tiaoXingMa);
                 intent.putExtra("pandianId", pandianId);
@@ -103,6 +119,14 @@ public class SaoMaActivity extends BaseActivity {
                 break;
             default:
                 break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (isLight) {
+            CodeUtils.isLightEnable(false);//关闪光灯
         }
     }
 }

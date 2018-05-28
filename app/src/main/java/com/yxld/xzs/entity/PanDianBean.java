@@ -42,7 +42,7 @@ public class PanDianBean {
     private String wuziGuige;//物资规格
     private String wuziDanwei;//物资单位
     private String wuziMingcheng;//物资名称
-    private int wuziDanjia;//物资单价
+    private double wuziDanjia;//物资单价
     private int wuziFenlei;//物资分类
     private Object wuziChaifen;
 
@@ -166,11 +166,11 @@ public class PanDianBean {
         this.wuziMingcheng = wuziMingcheng;
     }
 
-    public int getWuziDanjia() {
+    public double getWuziDanjia() {
         return wuziDanjia;
     }
 
-    public void setWuziDanjia(int wuziDanjia) {
+    public void setWuziDanjia(double wuziDanjia) {
         this.wuziDanjia = wuziDanjia;
     }
 

@@ -119,7 +119,7 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
     private void initData(final boolean isRefresh) {
         Map<String, String> map = new HashMap<>();
         map.put("uuid", Contains.uuid);
-        map.put("pandianId", "");
+        map.put("pandianId", pandianId);
         map.put("page", page + "");
         map.put("rows", rows + "");
         Disposable disposable = HttpAPIWrapper.getInstance(HttpAPIWrapper.getOkHttpClient())

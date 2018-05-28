@@ -33,7 +33,9 @@
 
     <EditText
         android:id="@+id/et_input"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="130px"
+        android:layout_marginRight="130px"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/bg_666"
@@ -41,7 +43,7 @@
         android:singleLine="true"
         android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="手动输入条形码"
-        android:maxEms="11"
+        android:maxLength="20"
         android:padding="30px"
         android:textColor="@color/white"
         android:textColorHint="@color/white"

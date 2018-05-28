@@ -81,6 +81,7 @@ import static com.yxld.xzs.http.api.API.CONFIRMDELIVERY;
 import static com.yxld.xzs.http.api.API.CONFIRMFUZE;
 import static com.yxld.xzs.http.api.API.CONFIRMROB;
 import static com.yxld.xzs.http.api.API.CONFIRMSEND;
+import static com.yxld.xzs.http.api.API.CONFIRM_PANDIAN;
 import static com.yxld.xzs.http.api.API.CONFRIMNIGHTWAREHOUSE;
 import static com.yxld.xzs.http.api.API.DELIVERYLIST;
 import static com.yxld.xzs.http.api.API.GETBUMEN;
@@ -346,6 +347,6 @@ public interface HttpApi {
     @GET(PANDIAN_DETAIL+"{wuziBianhao}")
     Observable<PanDianDetail> getPandianDetail(@Path("wuziBianhao") String wuziBianhao , @QueryMap Map<String, String> params);
 
-    @PUT(GETFUZEREN)
+    @PUT(CONFIRM_PANDIAN)
     Observable<BaseBack> confirmPandian(@QueryMap Map<String, String> params);
 }
