@@ -17,7 +17,7 @@ public interface API {
     /**
      * 测试 （晓燕）
      */
-    String BASE_PANDIAO = "http://192.168.8.132:8080/";//盘点
+    String BASE_PANDIAN = "http://192.168.8.132:8080/";//盘点 不要wygl 擦
     String IP_PRODUCT = "http://192.168.8.132:8080/wygl";
     String BASE_URL_2 = "http://192.168.8.132:8080/wygl/";
     /**
@@ -201,13 +201,22 @@ public interface API {
      */
     String TOUSU_LIST = "tousu/list.mvc";
 
+
     /**
      * 开始盘点, 生成对应的盘点单
      */
-    String START_PANDIAN = BASE_PANDIAO+"cxwy_web/pandian/app";
+    String START_PANDIAN = BASE_PANDIAN+"cxwy_web/pandian/app";
 
+    /**
+     * 开始盘点, 生成对应的盘点单
+     */
+    String PANDIAN_DETAIL = BASE_PANDIAN+"cxwy_web/pandian/app/goods/";
+    /**
+     * App端进行库存的盘点确认
+     */
+    String CONFIRM_PANDIAN = BASE_PANDIAN+"/cxwy_web/pandian/app/goods";
     /**
      * 未盘点列表
      */
-    String WEI_PANDIAN_LIST = BASE_PANDIAO + "cxwy_web/pandian/app/goods";
+    String WEI_PANDIAN_LIST = BASE_PANDIAN+ "cxwy_web/pandian/app/goods";
 }

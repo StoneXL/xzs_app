@@ -24,6 +24,8 @@ import com.yxld.xzs.entity.NightOrderDetail;
 import com.yxld.xzs.entity.NightOrderList;
 import com.yxld.xzs.entity.NightWarehouseDetail;
 import com.yxld.xzs.entity.NightWarehouseListBean;
+import com.yxld.xzs.entity.PanDian;
+import com.yxld.xzs.entity.PanDianDetail;
 import com.yxld.xzs.entity.RimOrderListBean;
 import com.yxld.xzs.entity.RobBean;
 import com.yxld.xzs.entity.SenderListBean;
@@ -394,11 +396,17 @@ public class HttpAPIWrapper {
     public Observable<BaseBack> firstScan(String url,Map data) {
         return wrapper(mHttpAPI.firstScan(url,data).compose(SCHEDULERS_TRANSFORMER));
     }
-    public Observable<BaseBack> startPandian(Map data) {
+    public Observable<PanDian> startPandian(Map data) {
         return wrapper(mHttpAPI.startPandian(data).compose(SCHEDULERS_TRANSFORMER));
     }
     public Observable<WeiPanDianListBean> weiPanDianList(Map data) {
         return wrapper(mHttpAPI.weiPanDianList(data).compose(SCHEDULERS_TRANSFORMER));
+    }
+    public Observable<PanDianDetail> getPandianDetail(String wuziBianhao, Map data) {
+        return wrapper(mHttpAPI.getPandianDetail(wuziBianhao,data).compose(SCHEDULERS_TRANSFORMER));
+    }
+    public Observable<BaseBack> confirmPandian(Map data) {
+        return wrapper(mHttpAPI.confirmPandian(data).compose(SCHEDULERS_TRANSFORMER));
     }
     //*************************************更新的接口*********************************//
     /**

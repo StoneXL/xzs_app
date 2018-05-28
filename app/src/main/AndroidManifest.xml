@@ -501,7 +501,7 @@
             android:label="扫一扫"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".activity.pandian.PanDianDetail"
+            android:name=".activity.pandian.PanDianDetailActivity"
             android:label="开始盘点"
             android:screenOrientation="portrait"/>
         <activity

@@ -20,6 +20,8 @@ import com.yxld.xzs.entity.NightOrderDetail;
 import com.yxld.xzs.entity.NightOrderList;
 import com.yxld.xzs.entity.NightWarehouseDetail;
 import com.yxld.xzs.entity.NightWarehouseListBean;
+import com.yxld.xzs.entity.PanDian;
+import com.yxld.xzs.entity.PanDianDetail;
 import com.yxld.xzs.entity.RimOrderListBean;
 import com.yxld.xzs.entity.RobBean;
 import com.yxld.xzs.entity.SenderListBean;
@@ -48,6 +50,8 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
 import retrofit2.http.Url;
 
@@ -93,6 +97,7 @@ import static com.yxld.xzs.http.api.API.LOGINOUT;
 import static com.yxld.xzs.http.api.API.NIGHTORDERDETAIL;
 import static com.yxld.xzs.http.api.API.NIGHTORDERLIST;
 import static com.yxld.xzs.http.api.API.NIGHTWAREHOUSELIST;
+import static com.yxld.xzs.http.api.API.PANDIAN_DETAIL;
 import static com.yxld.xzs.http.api.API.PEISONGSTATE;
 import static com.yxld.xzs.http.api.API.RIM_CONFIRM_DELIVERY;
 import static com.yxld.xzs.http.api.API.RIM_RIM_ROB;
@@ -334,7 +339,13 @@ public interface HttpApi {
 
     @FormUrlEncoded
     @POST(START_PANDIAN)
-    Observable<BaseBack> startPandian(@FieldMap Map<String, String> params);
+    Observable<PanDian> startPandian(@FieldMap Map<String, String> params);
     @GET(WEI_PANDIAN_LIST)
     Observable<WeiPanDianListBean> weiPanDianList(@QueryMap Map<String, String> params);
+
+    @GET(PANDIAN_DETAIL+"{wuziBianhao}")
+    Observable<PanDianDetail> getPandianDetail(@Path("wuziBianhao") String wuziBianhao , @QueryMap Map<String, String> params);
+
+    @PUT(GETFUZEREN)
+    Observable<BaseBack> confirmPandian(@QueryMap Map<String, String> params);
 }

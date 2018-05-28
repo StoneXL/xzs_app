@@ -1,5 +1,6 @@
 package com.yxld.xzs.activity.pandian;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,8 @@ public class SaoMaActivity extends BaseActivity {
     @BindView(R.id.et_input)
     EditText mEtInput;
     private CaptureFragment captureFragment;
+    private String pandianId; //盘点id
+    private String tiaoXingMa;//条形码编号
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,7 @@ public class SaoMaActivity extends BaseActivity {
         setContentView(R.layout.activity_saoma);
         ButterKnife.bind(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        pandianId = getIntent().getStringExtra("pandianId");
         initView();
     }
 
@@ -64,7 +68,7 @@ public class SaoMaActivity extends BaseActivity {
         @Override
         public void onAnalyzeSuccess(Bitmap mBitmap, String result) {
             KLog.i("扫码结果：" + result);
-
+            tiaoXingMa=result;
         }
 
         @Override
@@ -83,7 +87,11 @@ public class SaoMaActivity extends BaseActivity {
                 mEtInput.setCursorVisible(true);
                 break;
             case R.id.tv_queding:
-                startActivity(PanDianDetail.class);
+                tiaoXingMa = mEtInput.getText().toString().trim();
+                Intent intent = new Intent(this, PanDianDetailActivity.class);
+                intent.putExtra("wuziBianhao", tiaoXingMa);
+                intent.putExtra("pandianId", pandianId);
+                startActivity(intent);
                 break;
             case R.id.tv_one:
                 break;

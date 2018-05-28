@@ -1,6 +1,7 @@
 package com.yxld.xzs.activity.workbench;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import com.yxld.xzs.activity.pandian.SaoMaActivity;
 import com.yxld.xzs.base.BaseActivity;
 import com.yxld.xzs.contain.Contains;
 import com.yxld.xzs.entity.BaseBack;
+import com.yxld.xzs.entity.PanDian;
 import com.yxld.xzs.entity.XiangMu;
 import com.yxld.xzs.http.api.HttpAPIWrapper;
 import com.yxld.xzs.utils.PopWindowUtil;
@@ -174,7 +176,7 @@ public class PanDianActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 CustomPopWindow.onBackPressed();
-                pandianType = 2;
+                pandianType = 1;
                 mTvLeixing.setText("内部使用");
 
             }
@@ -183,7 +185,7 @@ public class PanDianActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 CustomPopWindow.onBackPressed();
-                pandianType = 1;
+                pandianType = 2;
                 mTvLeixing.setText("商城可售");
             }
         });
@@ -231,10 +233,17 @@ public class PanDianActivity extends BaseActivity {
 
     private void startPandian(Map<String, String> map) {
         progressDialog.show();
-        HttpAPIWrapper.getInstance().startPandian(map).subscribe(new Consumer<BaseBack>() {
+        HttpAPIWrapper.getInstance().startPandian(map).subscribe(new Consumer<PanDian>() {
             @Override
-            public void accept(@NonNull BaseBack baseBack) throws Exception {
+            public void accept(@NonNull PanDian baseBack) throws Exception {
                 progressDialog.hide();
+              if (baseBack.success){
+                  Intent intent = new Intent(PanDianActivity.this, SaoMaActivity.class);
+                  intent.putExtra("pandianId",baseBack.getData().getPandianId()+"");
+                  startActivity(intent);
+              }else {
+                  onError(baseBack.status,baseBack.msg);
+              }
             }
         }, new Consumer<Throwable>() {
             @Override
