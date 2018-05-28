@@ -68,7 +68,7 @@ public class SaoMaActivity extends BaseActivity {
         @Override
         public void onAnalyzeSuccess(Bitmap mBitmap, String result) {
             KLog.i("扫码结果：" + result);
-            tiaoXingMa=result;
+            tiaoXingMa = result;
         }
 
         @Override
@@ -80,6 +80,7 @@ public class SaoMaActivity extends BaseActivity {
 
     @OnClick({R.id.iv_shoudiantong, R.id.et_input, R.id.tv_queding, R.id.tv_one, R.id.tv_two})
     public void onViewClicked(View view) {
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.iv_shoudiantong:
                 break;
@@ -88,7 +89,7 @@ public class SaoMaActivity extends BaseActivity {
                 break;
             case R.id.tv_queding:
                 tiaoXingMa = mEtInput.getText().toString().trim();
-                Intent intent = new Intent(this, PanDianDetailActivity.class);
+                intent = new Intent(this, PanDianDetailActivity.class);
                 intent.putExtra("wuziBianhao", tiaoXingMa);
                 intent.putExtra("pandianId", pandianId);
                 startActivity(intent);
@@ -96,7 +97,9 @@ public class SaoMaActivity extends BaseActivity {
             case R.id.tv_one:
                 break;
             case R.id.tv_two:
-                startActivity(WeiPanDianListActivity.class);
+                intent = new Intent(this, WeiPanDianListActivity.class);
+                intent.putExtra("pandianId", pandianId);
+                startActivity(intent);
                 break;
             default:
                 break;

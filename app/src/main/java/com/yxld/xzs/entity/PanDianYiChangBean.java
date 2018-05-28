@@ -1,11 +1,10 @@
-package com.yxld.xzs;
+package com.yxld.xzs.entity;
 
 /**
- * Created by William on 2017/11/14.
+ * Created by William on 2018/5/28.
  */
 
-public class Atest {
-
+public class PanDianYiChangBean {
 
     /**
      * yichangId : 2

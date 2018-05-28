@@ -12,11 +12,6 @@ import com.yxld.xzs.R;
 import com.yxld.xzs.adapter.WeiPanDianAdapter;
 import com.yxld.xzs.base.BaseActivity;
 import com.yxld.xzs.contain.Contains;
-import com.yxld.xzs.entity.ApproveBean;
-import com.yxld.xzs.entity.ApproveListBean;
-import com.yxld.xzs.entity.BaseBack;
-import com.yxld.xzs.entity.NightOrderDetail;
-import com.yxld.xzs.entity.OrderDetailBean;
 import com.yxld.xzs.entity.PanDianBean;
 import com.yxld.xzs.entity.WeiPanDianListBean;
 import com.yxld.xzs.http.api.HttpAPIWrapper;
@@ -52,7 +47,7 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
     private List<PanDianBean> panDianList = new ArrayList<>();
     private int page;//分页数
     private int rows = 3;//每页加载数
-    private String pandianid;
+    private String pandianId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +56,7 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
         ButterKnife.bind(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // TODO: 2018/5/28 接收上级页面传来的数据pandianId
+        pandianId = getIntent().getStringExtra("pandianId");
 
         initView();
         initAdapter();
@@ -144,7 +139,7 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
                         } else {
                             weiPanDianAdapter.setEmptyView(notDataView);
                             weiPanDianAdapter.setNewData(new ArrayList<PanDianBean>());
-                            onError(data.status, data.MSG);
+                            onError(data.status, data.msg);
                         }
                     }
                 }, new Consumer<Throwable>() {
