@@ -396,6 +396,9 @@ public class HttpAPIWrapper {
     public Observable<BaseBack> startPandian(Map data) {
         return wrapper(mHttpAPI.startPandian(data).compose(SCHEDULERS_TRANSFORMER));
     }
+    public Observable<BaseBack> weiPanDianList(Map data) {
+        return wrapper(mHttpAPI.weiPanDianList(data).compose(SCHEDULERS_TRANSFORMER));
+    }
     //*************************************更新的接口*********************************//
     /**
      * 给任何Http的Observable加上通用的线程调度器

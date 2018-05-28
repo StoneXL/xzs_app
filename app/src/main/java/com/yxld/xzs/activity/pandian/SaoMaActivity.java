@@ -88,6 +88,7 @@ public class SaoMaActivity extends BaseActivity {
             case R.id.tv_one:
                 break;
             case R.id.tv_two:
+                startActivity(WeiPanDianListActivity.class);
                 break;
             default:
                 break;

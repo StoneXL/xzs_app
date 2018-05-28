@@ -201,9 +201,13 @@ public interface API {
      */
     String TOUSU_LIST = "tousu/list.mvc";
 
-
     /**
      * 开始盘点, 生成对应的盘点单
      */
     String START_PANDIAN = BASE_PANDIAO+"cxwy_web/pandian/app";
+
+    /**
+     * 未盘点列表
+     */
+    String WEI_PANDIAN_LIST = BASE_PANDIAO + "cxwy_web/pandian/app/goods";
 }

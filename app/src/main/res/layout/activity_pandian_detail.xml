@@ -10,14 +10,41 @@
         android:layout_height="match_parent">
 
         <com.zhy.autolayout.AutoLinearLayout
-            android:background="@drawable/add_host_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32px"
             android:layout_marginRight="32px"
             android:layout_marginTop="32px"
-            android:orientation="vertical"
-            >
+            android:background="@drawable/add_host_bg"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134px"
+                android:orientation="horizontal"
+                android:paddingLeft="24px"
+                android:paddingRight="24px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="库存类别:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_kucun_leibie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text=""
+                    android:textColor="@color/black"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/color_f0f0f0"/>
 
             <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"

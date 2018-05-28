@@ -104,6 +104,7 @@ import static com.yxld.xzs.http.api.API.SHOUYEXIAOXI;
 import static com.yxld.xzs.http.api.API.START_PANDIAN;
 import static com.yxld.xzs.http.api.API.TOUSU_LIST;
 import static com.yxld.xzs.http.api.API.WEIJIESUAN;
+import static com.yxld.xzs.http.api.API.WEI_PANDIAN_LIST;
 import static com.yxld.xzs.http.api.API.YIJIESUAN;
 import static com.yxld.xzs.http.api.API.ZONGSHOURU;
 
@@ -333,4 +334,6 @@ public interface HttpApi {
     @FormUrlEncoded
     @POST(START_PANDIAN)
     Observable<BaseBack> startPandian(@FieldMap Map<String, String> params);
+    @GET(WEI_PANDIAN_LIST)
+    Observable<BaseBack> weiPanDianList(@QueryMap Map<String, String> params);
 }

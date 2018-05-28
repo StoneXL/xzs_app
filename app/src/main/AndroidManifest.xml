@@ -516,6 +516,10 @@
             android:name=".activity.camera.CaptureWhActivity"
             android:label="扫一扫"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.pandian.WeiPanDianListActivity"
+            android:label="未盘点列表"
+            android:screenOrientation="portrait"/>
 
         <!-- android 7.0适配uri -->
         <provider
