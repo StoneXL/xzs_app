@@ -101,6 +101,7 @@ import static com.yxld.xzs.http.api.API.SEARCH_CAMERA;
 import static com.yxld.xzs.http.api.API.SENDLIST;
 import static com.yxld.xzs.http.api.API.SETDELIVERYMAN;
 import static com.yxld.xzs.http.api.API.SHOUYEXIAOXI;
+import static com.yxld.xzs.http.api.API.START_PANDIAN;
 import static com.yxld.xzs.http.api.API.TOUSU_LIST;
 import static com.yxld.xzs.http.api.API.WEIJIESUAN;
 import static com.yxld.xzs.http.api.API.YIJIESUAN;
@@ -329,4 +330,7 @@ public interface HttpApi {
     @GET
     Observable<BaseBack> firstScan(@Url String url, @QueryMap Map<String, String> params);
 
+    @FormUrlEncoded
+    @POST(START_PANDIAN)
+    Observable<BaseBack> startPandian(@FieldMap Map<String, String> params);
 }

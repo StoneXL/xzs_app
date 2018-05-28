@@ -10,10 +10,12 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.socks.library.KLog;
 import com.yxld.xzs.R;
 import com.yxld.xzs.activity.pandian.SaoMaActivity;
 import com.yxld.xzs.base.BaseActivity;
 import com.yxld.xzs.contain.Contains;
+import com.yxld.xzs.entity.BaseBack;
 import com.yxld.xzs.entity.XiangMu;
 import com.yxld.xzs.http.api.HttpAPIWrapper;
 import com.yxld.xzs.utils.PopWindowUtil;
@@ -26,6 +28,7 @@ import com.zhy.autolayout.AutoLinearLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -214,12 +217,36 @@ public class PanDianActivity extends BaseActivity {
                     Toast.makeText(this, "请选择盘点类型！", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                startActivity(SaoMaActivity.class);
+                Map<String, String> map = new HashMap<>();
+                map.put("uuid", Contains.uuid);
+                map.put("pandianXiangmuId", xiangmuId + "");
+                map.put("pandianFenlei",pandianType+"");
+                startPandian(map);
+//                startActivity(SaoMaActivity.class);
                 break;
             default:
                 break;
         }
     }
 
+    private void startPandian(Map<String, String> map) {
+        progressDialog.show();
+        HttpAPIWrapper.getInstance().startPandian(map).subscribe(new Consumer<BaseBack>() {
+            @Override
+            public void accept(@NonNull BaseBack baseBack) throws Exception {
+                progressDialog.hide();
+            }
+        }, new Consumer<Throwable>() {
+            @Override
+            public void accept(@NonNull Throwable throwable) throws Exception {
+                progressDialog.hide();
+            }
+        }, new Action() {
+            @Override
+            public void run() throws Exception {
+                progressDialog.hide();
+            }
+        });
+    }
 
 }

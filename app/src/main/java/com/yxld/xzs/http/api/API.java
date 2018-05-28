@@ -17,8 +17,9 @@ public interface API {
     /**
      * 测试 （晓燕）
      */
-//    String IP_PRODUCT = "http://192.168.8.127:8080/wygl";
-//    String BASE_URL_2 = "http://192.168.8.127:8080/wygl/";
+    String BASE_PANDIAO = "http://192.168.8.132:8080/";//盘点
+    String IP_PRODUCT = "http://192.168.8.132:8080/wygl";
+    String BASE_URL_2 = "http://192.168.8.132:8080/wygl/";
     /**
      * 测试 （吴芳）
      */
@@ -33,8 +34,8 @@ public interface API {
     /**
      * 线上
      */
-    String IP_PRODUCT = "http://wy.iot.xin";
-    String BASE_URL_2 = "http://wy.iot.xin/";
+//    String IP_PRODUCT = "http://wy.iot.xin";
+//    String BASE_URL_2 = "http://wy.iot.xin/";
 
 
     String BASE_URL = IP_PRODUCT + "/";
@@ -199,4 +200,10 @@ public interface API {
      * 工作台 投诉列表(POST)
      */
     String TOUSU_LIST = "tousu/list.mvc";
+
+
+    /**
+     * 开始盘点, 生成对应的盘点单
+     */
+    String START_PANDIAN = BASE_PANDIAO+"cxwy_web/pandian/app";
 }

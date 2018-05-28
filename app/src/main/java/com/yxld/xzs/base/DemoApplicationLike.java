@@ -13,10 +13,6 @@ import com.baidu.mapapi.SDKInitializer;
 import com.p2p.core.P2PSpecial.P2PSpecial;
 import com.socks.library.KLog;
 import com.tencent.bugly.crashreport.CrashReport;
-import com.tencent.tinker.anno.DefaultLifeCycle;
-import com.tencent.tinker.lib.tinker.TinkerInstaller;
-import com.tencent.tinker.loader.app.ApplicationLike;
-import com.tencent.tinker.loader.shareutil.ShareConstants;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 import com.videogo.openapi.EZOpenSDK;
 import com.yxld.xzs.utils.AppActivityManager;
@@ -34,10 +30,7 @@ import com.yxld.xzs.utils.swipeback.ActivityLifecycleHelper;
 //此处DefaultLifeCycle注解为Tinker提供用来隔离Application的方式,另一种为继承,推荐使用DefaultLifeCycle注解来隔离Application,
 // 这种方式会编译自动生成Application（命名为DemoApplication？） 看文档http://www.tinkerpatch.com/或网友教程http://blog.csdn
 // .net/l2show/article/details/53187548
-@DefaultLifeCycle(application = "com.yxld.xzs.base.DemoApplication",
-        flags = ShareConstants.TINKER_ENABLE_ALL,
-        loadVerifyFlag = false)
-public class DemoApplicationLike extends ApplicationLike {
+public class DemoApplicationLike extends Application {
     public static DemoApplicationLike instance;
 
     //摄像头
@@ -47,18 +40,9 @@ public class DemoApplicationLike extends ApplicationLike {
     public final static String APPVersion = "05.14";
     public AppActivityManager mAppActivityManager;
 
-    public DemoApplicationLike(Application application, int tinkerFlags, boolean
-            tinkerLoadVerifyFlag, long applicationStartElapsedTime, long
-                                       applicationStartMillisTime, Intent tinkerResultIntent) {
-        super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime,
-                applicationStartMillisTime, tinkerResultIntent);
-    }
 
-    @Override
-    public void onBaseContextAttached(Context base) {
-        super.onBaseContextAttached(base);
-        MultiDex.install(base);
-    }
+
+
 
 
     @Override
@@ -78,20 +62,20 @@ public class DemoApplicationLike extends ApplicationLike {
 //        //下载方式:
 //        UpdateKey.DialogOrNotification = UpdateKey.WITH_DIALOG;//通过Dialog来进行下载
         //微信tinker
-        TinkerInstaller.install(this);
+
 
 //        KLog.init(BuildConfig.LOG_DEBUG);
         KLog.init(true);
-        SDKInitializer.initialize(getApplication().getApplicationContext());
-        mAppActivityManager = new AppActivityManager(getApplication());
+        SDKInitializer.initialize(this);
+        mAppActivityManager = new AppActivityManager(this);
         MultiDex.install(getInstance());
         //阿里云推送
-        initCloudChannel(getApplication().getApplicationContext());
+        initCloudChannel(this);
         //滑动返回
-        getApplication().registerActivityLifecycleCallbacks(ActivityLifecycleHelper.build());
+      registerActivityLifecycleCallbacks(ActivityLifecycleHelper.build());
 
         //初始化二维码扫描
-        ZXingLibrary.initDisplayOpinion(this.getApplication());
+        ZXingLibrary.initDisplayOpinion(this);
     }
 
     public void initSDK() {
@@ -107,7 +91,7 @@ public class DemoApplicationLike extends ApplicationLike {
     }
 
     public static Context getInstance() {
-        return instance.getApplication().getApplicationContext();
+        return instance;
     }
 
     public static DemoApplicationLike getApp() {
@@ -128,7 +112,7 @@ public class DemoApplicationLike extends ApplicationLike {
         /**
          * APP_KEY请替换成自己申请的
          */
-        EZOpenSDK.initLib(instance.getApplication(), AppKey, "");
+        EZOpenSDK.initLib(this, AppKey, "");
     }
 
     private void initP2P() {

@@ -20,7 +20,6 @@ import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
 import com.socks.library.KLog;
 import com.tbruyelle.rxpermissions.Permission;
 import com.tbruyelle.rxpermissions.RxPermissions;
-import com.tencent.tinker.lib.tinker.TinkerInstaller;
 import com.yxld.xzs.R;
 import com.yxld.xzs.activity.camera.ScanandActivity;
 import com.yxld.xzs.base.BaseActivity;
@@ -75,7 +74,6 @@ public class HomeActivity extends BaseActivity {
         //UpdateFunGO.init(this);
         initTabHost();
         initAliPush();
-        initTinker();
         DemoApplicationLike.getApp().mAppActivityManager.addActivity(this);
         DemoApplicationLike.getApp().initSDK();
     }
@@ -92,11 +90,7 @@ public class HomeActivity extends BaseActivity {
         Contains.uuid = savedInstanceState.getString("uuid");
     }
 
-    //微信Tinker热修复
-    private void initTinker() {
-        TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),
-                Environment.getExternalStorageDirectory().getAbsolutePath() + "/patch_signed.apk");
-    }
+
 
     //登陆失效
     @Subscribe(threadMode = ThreadMode.MAIN)

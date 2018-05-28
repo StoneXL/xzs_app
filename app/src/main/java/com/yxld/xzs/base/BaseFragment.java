@@ -67,7 +67,7 @@ public abstract class BaseFragment extends Fragment {
         Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
 
         if (status == 99 || status == -99 || (status == -1 && !TextUtils.isEmpty(msg) && msg.contains("登录失效"))) {
-            JPushInterface.setAlias(DemoApplicationLike.getApp().getApplication(), "", new TagAliasCallback() {
+            JPushInterface.setAlias(DemoApplicationLike.getApp(), "", new TagAliasCallback() {
                 @Override
                 public void gotResult(int i, String s, Set<String> set) {
                     Log.d("geek", "JPushInterface clearData  setAlias  gotResult: " + i);

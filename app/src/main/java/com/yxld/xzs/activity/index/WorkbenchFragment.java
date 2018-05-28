@@ -267,9 +267,9 @@ public class WorkbenchFragment extends BaseFragment implements SwipeRefreshLayou
                 getActivity().startActivity(intent);
                 break;
             case R.id.iv_work_pandian://商品盘点
-                ToastUtil.showInfo(getActivity(), "敬请期待");
-//                intent = new Intent(getActivity(), PanDianActivity.class);
-//                getActivity().startActivity(intent);
+//                ToastUtil.showInfo(getActivity(), "敬请期待");
+                intent = new Intent(getActivity(), PanDianActivity.class);
+                getActivity().startActivity(intent);
                 break;
             case R.id.iv_rim://周边商家
                 //ToastUtil.showInfo(getActivity(), "敬请期待");

@@ -37,7 +37,6 @@ import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.jaeger.library.StatusBarUtil;
 import com.socks.library.KLog;
-import com.tencent.tinker.lib.tinker.TinkerInstaller;
 import com.yxld.xzs.activity.Income.IncomeActivity;
 import com.yxld.xzs.activity.Login.LoginActivity;
 import com.yxld.xzs.activity.Login.LoginNewActivity;
@@ -176,7 +175,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         initview();
-        initTinker();
         DemoApplicationLike.getApp().mAppActivityManager.addActivity(this);
         DemoApplicationLike.getApp().initSDK();
     }
@@ -193,11 +191,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Contains.uuid = savedInstanceState.getString("uuid");
     }
 
-    //微信Tinker热修复
-    private void initTinker() {
-        TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),
-                Environment.getExternalStorageDirectory().getAbsolutePath() + "/patch_signed.apk");
-    }
+
 
     private void initview() {
         tabLayout = (TabLayoutPlus) findViewById(R.id.tabLayout);
