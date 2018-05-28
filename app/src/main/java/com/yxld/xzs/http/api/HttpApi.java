@@ -26,6 +26,7 @@ import com.yxld.xzs.entity.SenderListBean;
 import com.yxld.xzs.entity.SuggestBean;
 import com.yxld.xzs.entity.TeamManagerListEntity;
 import com.yxld.xzs.entity.TeamMember;
+import com.yxld.xzs.entity.WeiPanDianListBean;
 import com.yxld.xzs.entity.XiangMu;
 import com.yxld.xzs.entity.XunGengXiangQing;
 import com.yxld.xzs.entity.XunJianDianEntity;
@@ -335,5 +336,5 @@ public interface HttpApi {
     @POST(START_PANDIAN)
     Observable<BaseBack> startPandian(@FieldMap Map<String, String> params);
     @GET(WEI_PANDIAN_LIST)
-    Observable<BaseBack> weiPanDianList(@QueryMap Map<String, String> params);
+    Observable<WeiPanDianListBean> weiPanDianList(@QueryMap Map<String, String> params);
 }

@@ -27,23 +27,23 @@ public class PanDianBean {
      * wuziChaifen : null
      */
 
-    private int detailId;
-    private int detailKucunId;
-    private int detailPandian;
-    private String detailShengchanRiqi;
-    private int detailYouxiaoqi;
-    private String detailGuoqiRiqi;
-    private int detailShuliang;
-    private Object kucunXiangmuMingcheng;
-    private Object kucunFenlei;
-    private Object kucunZhuangtai;
-    private String wuziBianhao;
-    private String wuziPinpai;
-    private String wuziGuige;
-    private String wuziDanwei;
-    private String wuziMingcheng;
-    private int wuziDanjia;
-    private int wuziFenlei;
+    private int detailId;//
+    private int detailKucunId;//库存ID
+    private int detailPandian;//盘点
+    private String detailShengchanRiqi;//生产日期
+    private int detailYouxiaoqi;//有效期
+    private String detailGuoqiRiqi;//过期日期
+    private int detailShuliang;//数量
+    private Object kucunXiangmuMingcheng;//库存项目名称
+    private int kucunFenlei;//1为内部使用，2为商城可售
+    private Object kucunZhuangtai;//库存状态
+    private String wuziBianhao;//物资编号
+    private String wuziPinpai;//物资品牌
+    private String wuziGuige;//物资规格
+    private String wuziDanwei;//物资单位
+    private String wuziMingcheng;//物资名称
+    private int wuziDanjia;//物资单价
+    private int wuziFenlei;//物资分类
     private Object wuziChaifen;
 
     public int getDetailId() {
@@ -110,11 +110,11 @@ public class PanDianBean {
         this.kucunXiangmuMingcheng = kucunXiangmuMingcheng;
     }
 
-    public Object getKucunFenlei() {
+    public int getKucunFenlei() {
         return kucunFenlei;
     }
 
-    public void setKucunFenlei(Object kucunFenlei) {
+    public void setKucunFenlei(int kucunFenlei) {
         this.kucunFenlei = kucunFenlei;
     }
 
@@ -188,5 +188,29 @@ public class PanDianBean {
 
     public void setWuziChaifen(Object wuziChaifen) {
         this.wuziChaifen = wuziChaifen;
+    }
+
+    @Override
+    public String toString() {
+        return "PanDianBean{" +
+                "detailId=" + detailId +
+                ", detailKucunId=" + detailKucunId +
+                ", detailPandian=" + detailPandian +
+                ", detailShengchanRiqi='" + detailShengchanRiqi + '\'' +
+                ", detailYouxiaoqi=" + detailYouxiaoqi +
+                ", detailGuoqiRiqi='" + detailGuoqiRiqi + '\'' +
+                ", detailShuliang=" + detailShuliang +
+                ", kucunXiangmuMingcheng=" + kucunXiangmuMingcheng +
+                ", kucunFenlei=" + kucunFenlei +
+                ", kucunZhuangtai=" + kucunZhuangtai +
+                ", wuziBianhao='" + wuziBianhao + '\'' +
+                ", wuziPinpai='" + wuziPinpai + '\'' +
+                ", wuziGuige='" + wuziGuige + '\'' +
+                ", wuziDanwei='" + wuziDanwei + '\'' +
+                ", wuziMingcheng='" + wuziMingcheng + '\'' +
+                ", wuziDanjia=" + wuziDanjia +
+                ", wuziFenlei=" + wuziFenlei +
+                ", wuziChaifen=" + wuziChaifen +
+                '}';
     }
 }

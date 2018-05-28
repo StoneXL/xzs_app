@@ -17,6 +17,8 @@ import com.yxld.xzs.entity.ApproveListBean;
 import com.yxld.xzs.entity.BaseBack;
 import com.yxld.xzs.entity.NightOrderDetail;
 import com.yxld.xzs.entity.OrderDetailBean;
+import com.yxld.xzs.entity.PanDianBean;
+import com.yxld.xzs.entity.WeiPanDianListBean;
 import com.yxld.xzs.http.api.HttpAPIWrapper;
 import com.yxld.xzs.utils.UIUtils;
 import com.yxld.xzs.view.CustomLoadMoreView;
@@ -47,7 +49,7 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
     private View loadingView, notDataView;
     private WeiPanDianAdapter weiPanDianAdapter;
 
-    private List<BaseBack> panDianList = new ArrayList<>();
+    private List<PanDianBean> panDianList = new ArrayList<>();
     private int page;//分页数
     private int rows = 3;//每页加载数
     private String pandianid;
@@ -127,11 +129,11 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
         map.put("rows", rows + "");
         Disposable disposable = HttpAPIWrapper.getInstance(HttpAPIWrapper.getOkHttpClient())
                 .weiPanDianList(map)
-                .subscribe(new Consumer<BaseBack>() {
+                .subscribe(new Consumer<WeiPanDianListBean>() {
                     @Override
-                    public void accept(@NonNull BaseBack data) throws Exception {
+                    public void accept(@NonNull WeiPanDianListBean data) throws Exception {
                         swipeLayout.setRefreshing(false);
-                        /*if (data.status == 0) {
+                        if (data.status == 1) {
                             if (isRefresh) {
                                 setData(true, data);
                                 weiPanDianAdapter.setEnableLoadMore(true);//自动加载更多
@@ -141,15 +143,15 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
                             }
                         } else {
                             weiPanDianAdapter.setEmptyView(notDataView);
-                            weiPanDianAdapter.setNewData(new ArrayList<BaseBack>());
+                            weiPanDianAdapter.setNewData(new ArrayList<PanDianBean>());
                             onError(data.status, data.MSG);
-                        }*/
+                        }
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(@NonNull Throwable throwable) throws Exception {
                         weiPanDianAdapter.setEmptyView(notDataView);
-                        weiPanDianAdapter.setNewData(new ArrayList<BaseBack>());
+                        weiPanDianAdapter.setNewData(new ArrayList<PanDianBean>());
                         swipeLayout.setRefreshing(false);//加载完成,不显示进度条
                     }
                 });
@@ -162,24 +164,24 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
      * @param isRefresh
      * @param data
      */
-    private void setData(boolean isRefresh, ApproveListBean data) {
-        /*page++;
-        if (null != data.getRows() && data.getRows().size() != 0) {
-            approveBeanList = data.getRows();
+    private void setData(boolean isRefresh, WeiPanDianListBean data) {
+        page++;
+        if (null != data.getData() && data.getData() .size() != 0) {
+            panDianList = data.getData();
         } else {
-            approveBeanList.clear();
+            panDianList.clear();
         }
-        final int size = approveBeanList == null ? 0 : approveBeanList.size();
+        final int size = panDianList == null ? 0 : panDianList.size();
 
         if (isRefresh) {
             if (size > 0) {
             } else {
                 weiPanDianAdapter.setEmptyView(notDataView);
             }
-            weiPanDianAdapter.setNewData(approveBeanList);//将首次数据塞入适配器的方法
+            weiPanDianAdapter.setNewData(panDianList);//将首次数据塞入适配器的方法
         } else {
             if (size > 0) {
-                weiPanDianAdapter.addData(approveBeanList);//加载更多时直接将更多数据塞入适配器
+                weiPanDianAdapter.addData(panDianList);//加载更多时直接将更多数据塞入适配器
             }
         }
 
@@ -189,7 +191,7 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
             // 这里设置为false可用来显示没有更多数据item
         } else {
             weiPanDianAdapter.loadMoreComplete();//加载完成（注意不是加载结束，而是本次数据加载结束并且还有下页数据）
-        }*/
+        }
     }
 
 

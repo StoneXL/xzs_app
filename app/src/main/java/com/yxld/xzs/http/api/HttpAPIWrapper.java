@@ -30,6 +30,7 @@ import com.yxld.xzs.entity.SenderListBean;
 import com.yxld.xzs.entity.SuggestBean;
 import com.yxld.xzs.entity.TeamManagerListEntity;
 import com.yxld.xzs.entity.TeamMember;
+import com.yxld.xzs.entity.WeiPanDianListBean;
 import com.yxld.xzs.entity.XiangMu;
 import com.yxld.xzs.entity.XunGengXiangQing;
 import com.yxld.xzs.entity.XunJianDianEntity;
@@ -396,7 +397,7 @@ public class HttpAPIWrapper {
     public Observable<BaseBack> startPandian(Map data) {
         return wrapper(mHttpAPI.startPandian(data).compose(SCHEDULERS_TRANSFORMER));
     }
-    public Observable<BaseBack> weiPanDianList(Map data) {
+    public Observable<WeiPanDianListBean> weiPanDianList(Map data) {
         return wrapper(mHttpAPI.weiPanDianList(data).compose(SCHEDULERS_TRANSFORMER));
     }
     //*************************************更新的接口*********************************//
