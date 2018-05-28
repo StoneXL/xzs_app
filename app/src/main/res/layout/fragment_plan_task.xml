@@ -1,0 +1,52 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/scrollView"
+       >
+       <com.zhy.autolayout.AutoLinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+
+           >
+           <com.yxld.xzs.view.CalendarView
+               android:background="@color/white"
+               android:id="@+id/calendarView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
+
+           <com.zhy.autolayout.AutoFrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="125px"
+               android:background="@color/color_ff5654"
+               android:paddingLeft="60px"
+               android:paddingRight="60px">
+
+               <com.yxld.xzs.view.LeftImgTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   app:left_drawable="@mipmap/icon_patrol"
+                   app:right_text="巡检信息" />
+           </com.zhy.autolayout.AutoFrameLayout>
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recyclerView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layoutManager="LinearLayoutManager"
+               android:layout_marginLeft="40px"
+               android:layout_marginRight="40px"
+               android:visibility="gone"
+               >
+
+           </android.support.v7.widget.RecyclerView>
+       </com.zhy.autolayout.AutoLinearLayout>
+   </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

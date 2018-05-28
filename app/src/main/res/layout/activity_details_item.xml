@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/drawer_white">
+
+    <TextView
+        android:id="@+id/details_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:paddingTop="30px"
+        android:text="收入"
+        android:textColor="@color/text_black"
+        android:textSize="50px" />
+
+    <TextView
+        android:id="@+id/details_danhao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/details_address"
+        android:layout_below="@+id/details_address"
+        android:layout_marginTop="5px"
+        android:text="订单号: 2000000140290490037"
+        android:textColor="#C7C7C7"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/details_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/details_danhao"
+        android:layout_below="@+id/details_danhao"
+        android:layout_marginTop="5px"
+        android:text="完成时间: 2016-10-17 13:00"
+        android:textColor="#C7C7C7"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/details_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/details_address"
+        android:layout_marginEnd="50px"
+        android:drawableLeft="@mipmap/icon_money"
+        android:drawablePadding="20px"
+        android:text="+3.0"
+        android:textColor="#72C57D"
+        android:textSize="40px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_below="@+id/details_time"
+        android:layout_marginTop="20px"
+        android:background="#D5D5D9" />
+</com.zhy.autolayout.AutoRelativeLayout>

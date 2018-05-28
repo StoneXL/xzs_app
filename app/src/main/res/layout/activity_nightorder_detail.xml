@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34px"
+                android:layout_marginRight="34px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="34px"
+                android:paddingLeft="34px"
+                android:paddingRight="34px">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="127px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:text="下单时间："/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/repair_material_text1"
+                        android:lines="1"
+                        android:text="2017-11-11 12:00"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:layout_width="wrap_content"
+                        android:text="订单编号："/>
+
+                    <TextView
+                        android:id="@+id/tv_order_num"
+                        style="@style/repair_material_text1"
+                        android:layout_marginLeft="38px"
+                        android:lines="1"
+                        android:text="3213546573213241654161"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:orientation="horizontal">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/repair_material_text2"
+                            android:layout_width="wrap_content"
+                            android:text="收货人姓名："/>
+
+                        <TextView
+                            android:id="@+id/tv_receipt_name"
+                            style="@style/repair_material_text1"
+                            android:layout_marginLeft="38px"
+                            android:text="莫佳佳"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:layout_width="wrap_content"
+                        android:text="收货人电话："/>
+
+                    <TextView
+                        android:id="@+id/tv_receipt_phone"
+                        style="@style/repair_material_text1"
+                        android:layout_marginLeft="38px"
+                        android:text="18612345678"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:text="收货人地址："/>
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        style="@style/repair_material_text1"
+                        android:layout_marginLeft="38px"
+                        android:lines="1"
+                        android:text="湖南省衡阳市蒸湘区"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/auto_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:text="配送人："/>
+
+                    <TextView
+                        android:id="@+id/tv_delivery_name"
+                        style="@style/repair_material_text1"
+                        android:lines="1"
+                        android:text="李四"/>
+
+                    <ImageButton
+                        android:id="@+id/ib_change"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_marginLeft="30px"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/changp"
+                        android:visibility="visible"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:layout_width="290px"
+                android:layout_height="75px"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="24px"
+                android:background="@mipmap/spxq"
+                android:gravity="center"
+                android:text="订单详情"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="34px"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <!--item的padding为34px-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_material"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="93px">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="290px"
+                android:layout_height="70px"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="24px"
+                android:background="@mipmap/splb"
+                android:gravity="center"
+                android:text="商品"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="139px"
+            android:layout_marginTop="34px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_0079C2"
+                android:text="安排配送人"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+
+            <!--<Button-->
+            <!--android:id="@+id/bt_nopass"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/color_bbbbbb"-->
+            <!--android:text="不通过"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="44px"/>-->
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

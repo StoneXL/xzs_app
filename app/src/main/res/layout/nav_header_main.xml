@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerLayout"
+    android:layout_height="230dp"
+    android:background="@color/drawer_blue"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/rofile_image"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:src="@mipmap/icon_avatar"
+            android:layout_marginStart="50px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="100px" />
+
+        <TextView
+            android:id="@+id/nav_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="70px"
+            android:layout_toRightOf="@+id/rofile_image"
+            android:layout_marginLeft="50px"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/nav_header_fuzeren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:textColor="@color/yellow"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="20px"
+            android:layout_below="@+id/nav_header_name"
+            android:layout_alignStart="@+id/nav_header_name" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/nav_header_view"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_height="1dp"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nav_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接单中"
+            android:textSize="55px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+        <ImageView
+            android:id="@+id/load_push"
+            android:layout_toLeftOf="@+id/SwitchButton"
+            android:layout_marginRight="30px"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/loading_anim_list"
+            android:visibility="gone"/>
+
+        <ch.ielse.view.SwitchView
+            android:id="@+id/SwitchButton"
+            android:layout_width="wrap_content"
+            app:primaryColor="@color/main_color"
+            app:isOpened="true"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

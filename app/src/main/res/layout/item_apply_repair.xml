@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yxld.xzs.view.SlideItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/slide_item"
+    android:layout_marginBottom="26px"
+    >
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="312px"
+        android:background="@color/white"
+        >
+
+        <include layout="@layout/item_apply_repair_visible_content"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="590px"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_show_material"
+                android:layout_width="356px"
+                android:layout_height="match_parent"
+                android:background="@color/color_c7c7cc"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="查看材料" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="234px"
+                android:layout_height="match_parent"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/color_ff3b30"
+                />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.yxld.xzs.view.SlideItem>

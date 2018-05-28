@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="123px"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="84px"
+        android:layout_centerVertical="true"
+        android:id="@+id/ll_container"
+        >
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="44px"
+            tools:text = "开始时间"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_666666"
+            />
+        <TextView
+            android:id="@+id/tv_badge"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:textColor="@color/white"
+            android:textSize="22px"
+            tools:text="!"
+            android:background="@drawable/bg_badge_red"
+            android:gravity="center"
+            android:layout_marginLeft="-18px"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <TextView
+        android:layout_marginLeft="50px"
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="44px"
+        tools:text="7月25日 20:08"
+        android:textColor="@color/color_666666"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:layout_toRightOf="@id/ll_container"
+
+        />
+</com.zhy.autolayout.AutoRelativeLayout>

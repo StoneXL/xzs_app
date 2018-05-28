@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/color_007ac0">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40px"
+            android:textColor="@color/white"
+            android:textSize="38px"
+            tools:text="电压" />
+    </com.zhy.autolayout.AutoFrameLayout>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:background="@drawable/shape_color_dddddd"
+        >
+        <EditText
+            android:id="@+id/edit_market"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80px"
+            android:maxHeight="300px"
+            android:background="@null"
+            tools:hint="200V - 220V"
+            android:textSize="38px"
+            />
+    </com.zhy.autolayout.AutoFrameLayout>
+    <include layout="@layout/layout_dialog_btns"/>
+</com.zhy.autolayout.AutoLinearLayout>

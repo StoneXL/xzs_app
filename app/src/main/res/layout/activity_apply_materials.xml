@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/auto_rl"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/auto_rl"
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_zongjia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:gravity="center"
+            android:text="总计：920"/>
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="240px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/drawer_blue_new"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

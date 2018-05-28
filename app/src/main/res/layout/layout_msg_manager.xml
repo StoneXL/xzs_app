@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_marginTop="32px"
+    >
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="40px"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="临时计划安排"
+            android:textColor="@color/color_333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="2017-8-1"
+            android:textColor="@color/color_999999"
+            android:textSize="36px" />
+    </com.zhy.autolayout.AutoFrameLayout>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36px"
+        android:text="因特殊原因,针对特殊情况做出调整。"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="32px"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/color_666666"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginBottom="40px"
+        />
+</com.zhy.autolayout.AutoLinearLayout>

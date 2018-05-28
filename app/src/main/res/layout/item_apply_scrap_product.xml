@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40px"
+        >
+        <com.yxld.xzs.view.LeftRightTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="商品名称:"
+            app:right_text="哈哈哈哈哈哈哈哈哈哈" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28px">
+
+            <com.yxld.xzs.view.LeftRightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:left_text="商品规格:"
+                app:right_text="瓶" />
+
+            <com.yxld.xzs.view.LeftRightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:left_text="待出库数量:"
+                app:right_text="4" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28px">
+
+            <com.yxld.xzs.view.LeftRightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:left_text="单价:"
+                app:right_text="4" />
+
+            <com.yxld.xzs.view.LeftRightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:left_text="总价:"
+                app:right_text="16" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28px">
+
+            <com.yxld.xzs.view.LeftRightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:left_text="用途:"
+                app:right_text="报修" />
+
+            <com.yxld.xzs.view.LeftRightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:left_text="生产商:"
+                app:right_text="哇哈哈" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="40px"
+        android:background="@color/color_d6d7dc"
+        />
+</com.zhy.autolayout.AutoLinearLayout>

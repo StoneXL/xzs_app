@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/repair_bg">
+
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="26px"
+                android:background="@color/repair_blank" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="136px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/layout_line_sides"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="54px"
+                    android:text="维修人员"
+                    android:textColor="@color/repair_gray"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:background="@color/repair_line" />
+
+
+                <TextView
+                    android:id="@+id/treat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:textColor="@color/repair_black"
+                    android:textSize="40px" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="136px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/layout_line_sides">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="54px"
+                    android:text="维修时间"
+                    android:textColor="@color/repair_gray"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:background="@color/repair_line" />
+
+
+                <TextView
+                    android:id="@+id/treat_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:textColor="@color/repair_black"
+                    android:textSize="40px" />
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="136px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/layout_line_sides">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="54px"
+                    android:text="联系电话"
+                    android:textColor="@color/repair_gray"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:background="@color/repair_line" />
+
+
+                <TextView
+                    android:id="@+id/treat_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:textColor="@color/repair_black"
+                    android:textSize="40px" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="274px"
+                android:layout_marginBottom="26px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="26px"
+                android:background="@drawable/layout_line_all">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="54px"
+                    android:text="维修前图"
+                    android:textColor="@color/repair_gray"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:background="@color/repair_line" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/treat_recycler1"
+                    android:layout_width="match_parent"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px" />
+
+
+                <ImageView
+                    android:id="@+id/treat_image1"
+                    android:layout_width="204px"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px" />
+
+                <ImageView
+                    android:id="@+id/treat_image2"
+                    android:layout_width="204px"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px" />
+
+                <ImageView
+                    android:id="@+id/treat_image3"
+                    android:layout_width="204px"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="274px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/layout_line_all">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="54px"
+                    android:text="维修后图"
+                    android:textColor="@color/repair_gray"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:background="@color/repair_line" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/treat_recycler2"
+                    android:layout_width="match_parent"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px"/>
+
+
+                <ImageView
+                    android:id="@+id/treat_image4"
+                    android:layout_width="204px"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px" />
+
+                <ImageView
+                    android:id="@+id/treat_image5"
+                    android:layout_width="204px"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px"/>
+
+                <ImageView
+                    android:id="@+id/treat_image6"
+                    android:layout_width="204px"
+                    android:layout_height="204px"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginTop="32px" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+            
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="106px"
+                android:id="@+id/treat_voice"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="32px"
+                    android:layout_width="wrap_content"
+                    android:textSize="40px"
+                    android:textColor="@color/dark_gray"
+                    android:layout_height="wrap_content"
+                    android:text="请选择" />
+
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_voice"
+                    android:drawablePadding="10px"
+                    android:textSize="36px"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginLeft="130px"
+                    android:text="语音留言" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_marginLeft="46px"
+                    android:textSize="36px"
+                    android:textColor="@color/dark_gray"
+                    android:drawableLeft="@mipmap/ic_voice_write"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="文字留言" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="284px"
+                android:layout_marginBottom="166px"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:background="@drawable/layout_line_all">
+
+                <com.yxld.xzs.view.AudioRecordButton
+                    android:id="@+id/treat_audio"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="10px"
+                    android:drawableTop="@mipmap/ic_voice1"
+                    android:layout_marginLeft="32px"
+                    android:layout_marginRight="54px"
+                    android:text="语音留言"
+                    android:textColor="@color/repair_gray"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:background="@color/repair_line" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/treat_record"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:src="@mipmap/ic_voice_play"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="40px"
+                        android:textColor="@color/repair_black"
+                        android:text="留言请播放" />
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+                <EditText
+                    android:id="@+id/treat_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="32px"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请您按住左边话筒录音"
+                    android:textColor="@color/repair_black"
+                    android:textColorHint="@color/repair_select"
+                    android:textSize="40px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/treat_button"
+        android:layout_width="match_parent"
+        android:layout_height="136px"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/repair_blue"
+        android:text="验收完成"
+        android:textColor="@color/drawer_white"
+        android:textSize="44px" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

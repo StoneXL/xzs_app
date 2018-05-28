@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:divider="@drawable/layout_divider"
+                                     android:orientation="vertical"
+                                     android:showDividers="middle">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/setting_place"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@drawable/layout_selector"
+        android:drawableLeft="@mipmap/icon_set_changepwd"
+        android:drawablePadding="20px"
+        android:drawableRight="@mipmap/icon_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="修改密码"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="50px"/>
+
+    <TextView
+        android:id="@+id/setting_anquan"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@drawable/layout_selector"
+        android:drawableLeft="@mipmap/icon_set_changepwd"
+        android:drawablePadding="20px"
+        android:drawableRight="@mipmap/icon_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="账号安全"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="50px"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@color/drawer_white">
+
+        <TextView
+            android:id="@+id/setting_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_set_voice"
+            android:drawablePadding="20px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="播放提示音"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="50px"/>
+
+        <CheckBox
+            android:id="@+id/switch_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/switch_button"
+            android:button="@null"
+            android:checked="true"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@color/drawer_white">
+
+        <TextView
+            android:id="@+id/setting_shock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_set_shock"
+            android:drawablePadding="20px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="震动提醒"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="50px"/>
+
+        <CheckBox
+            android:id="@+id/switch_shock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:background="@drawable/switch_button"
+            android:button="@null"
+            android:checked="true"
+
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/setting_update"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@drawable/layout_selector">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="160px"
+            android:layout_alignParentTop="true"
+            android:drawableLeft="@mipmap/icon_set_copr"
+            android:drawablePadding="20px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="版本更新"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="50px"
+            />
+
+
+        <TextView
+            android:id="@+id/version_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="40px"
+            android:paddingRight="40px"
+            android:text="1.1.1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="50px"/>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/setting_loginout"
+        android:layout_width="match_parent"
+        android:layout_height="196px"
+        android:background="@drawable/layout_selector"
+        android:drawableLeft="@mipmap/icon_set_exit"
+        android:drawablePadding="20px"
+        android:drawableRight="@mipmap/icon_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="退出登录"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="50px"
+        android:visibility="gone"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/btn_loginout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="243px"
+            android:layout_marginTop="166px"
+            android:background="@mipmap/bg_button_big"
+            android:text="退出登录"
+            android:textColor="@color/white"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

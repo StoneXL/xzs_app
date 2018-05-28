@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34px"
+        android:layout_marginRight="34px"
+        android:layout_marginTop="34px"
+        android:background="@drawable/shape_night_order"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="24px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    style="@style/item_nightorder_list_ll">
+
+                    <TextView
+                        style="@style/item_nightorder_list_tex1"
+                        android:text="出库单号："/>
+
+                    <TextView
+                        android:id="@+id/tv_warehouse_num"
+                        style="@style/item_nightorder_list_text2"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    style="@style/item_nightorder_list_ll">
+
+                    <TextView
+                        style="@style/item_nightorder_list_tex1"
+                        android:text="提交时间："/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/item_nightorder_list_text2"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    style="@style/item_nightorder_list_ll">
+
+                    <TextView
+                        style="@style/item_nightorder_list_tex1"
+                        android:text="领 取 人  ："/>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/item_nightorder_list_text2"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/tv_state"
+                style="@style/item_nightorder_list_text3"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46px"
+            android:src="@mipmap/jianbiantiao"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

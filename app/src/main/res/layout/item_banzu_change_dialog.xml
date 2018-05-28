@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:layout_height="168px"
+    android:paddingLeft="10px"
+    android:paddingRight="10px"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/tv_xunxian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="巡一线"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/tv_xun_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张三"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_xun_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:00-19:00"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"
+        />
+</com.zhy.autolayout.AutoRelativeLayout>

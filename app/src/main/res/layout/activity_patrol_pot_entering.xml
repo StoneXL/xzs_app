@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_bianma"
+        android:layout_width="match_parent"
+        android:hint="编码"
+        android:layout_marginLeft="30px"
+        android:gravity="center_vertical"
+        android:layout_height="134px" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_333"
+        />
+    <TextView
+        android:id="@+id/tv_jingweidu"
+        android:layout_width="match_parent"
+        android:hint="请选择项目"
+        android:layout_marginLeft="30px"
+        android:gravity="center_vertical"
+        android:layout_height="134px" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_333"
+        />
+    <EditText
+        android:id="@+id/tv_dizhi"
+        android:layout_width="match_parent"
+        android:hint="地址"
+        android:background="@null"
+        android:layout_marginLeft="30px"
+        android:gravity="center_vertical"
+        android:layout_height="134px" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_333"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="320px"
+        android:text="提交"
+        android:textSize="60px"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20px"
+        android:background="@drawable/bg_maincolor"
+        android:layout_height="134px" />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34px"
+                android:layout_marginRight="34px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="34px"
+                android:paddingRight="34px">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="127px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:text="夜间负责人："/>
+
+                    <TextView
+                        android:id="@+id/tv_night_responsible"
+                        style="@style/repair_material_text1"
+                        android:lines="1"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="34px"
+                    android:layout_marginTop="46px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:text="提 交 时 间："/>
+
+                    <TextView
+                        android:id="@+id/tv_apply_time"
+                        style="@style/repair_material_text1"
+                        android:layout_marginLeft="38px"
+                        android:lines="1"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:layout_width="290px"
+                android:layout_height="75px"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="24px"
+                android:background="@mipmap/spxq"
+                android:gravity="center"
+                android:text="出库详情"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="34px"
+            android:background="@color/white">
+
+            <!--item的padding为34px-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_material"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="93px">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="290px"
+                android:layout_height="70px"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="24px"
+                android:background="@mipmap/splb"
+                android:gravity="center"
+                android:text="审批物资"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="139px"
+            android:layout_marginTop="34px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_0079C2"
+                android:text="确认领取"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+
+            <!--<Button
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_bbbbbb"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="44px"/>-->
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

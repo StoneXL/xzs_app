@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="@drawable/selector_click_recycler_item_bg"
+        android:paddingLeft="40px"
+        android:paddingRight="40px">
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="@color/color_ff5654" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18px"
+            android:layout_toRightOf="@id/tv_star"
+            android:ellipsize="end"
+            android:maxEms="15"
+            android:maxLines="1"
+            android:textColor="@color/color_666666"
+            android:textSize="44px"
+            tools:text="1、天花板是否干净" />
+
+        <com.yxld.xzs.view.PatrolRecordSwitchView
+            android:id="@+id/switch_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/tv_iv_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:maxLines="1"
+                android:text="未填写"
+                android:textColor="@color/color_999999"
+                android:textSize="44px" />
+
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@mipmap/icon_right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_dddddd" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/remark_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_remark_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="20px"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_999999"
+            android:textSize="44px"
+            android:visibility="gone"
+            tools:text="这是啥" />
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            />
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_dddddd"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            />
+        <com.zhy.autolayout.AutoLinearLayout
+            android:visibility="gone"
+            android:id="@+id/root_layout_record"
+            android:layout_width="match_parent"
+            android:layout_height="284px">
+            <com.yxld.xzs.view.AudioRecordButton
+                android:id="@+id/treat_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32px"
+                android:layout_marginRight="54px"
+                android:background="@null"
+                android:drawablePadding="10px"
+                android:drawableTop="@mipmap/ic_voice1"
+                android:text="语音留言"
+                android:textColor="@color/repair_gray"
+                android:textSize="40px" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="60px"
+                android:layout_gravity="center"
+                android:background="@color/color_dddddd" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/treat_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <ImageView
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:src="@mipmap/ic_voice_play" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="留言请播放"
+                    android:textColor="@color/repair_black"
+                    android:textSize="40px" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="32px"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请您按住左边话筒录音"
+                android:textColor="@color/repair_black"
+                android:textColorHint="@color/repair_select"
+                android:textSize="40px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

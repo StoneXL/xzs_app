@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/tv_search"
+                android:layout_width="810px"
+                android:layout_height="80px"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="135px"
+                android:layout_marginLeft="135px"
+                android:layout_marginRight="135px"
+                android:layout_marginStart="135px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/bg_market_search"
+                android:gravity="center"
+                android:visibility="visible"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_search_icon"
+                    android:layout_width="42px"
+                    android:layout_height="42px"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/scsy_ss"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/iv_search_icon"
+                    android:hint="搜索"
+                    android:textSize="38px"
+                    />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40px"
+                android:background="@drawable/add_host_bg"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="所在项目"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_xiangmu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:drawableRight="@mipmap/arrow_bottom"
+                        android:gravity="center_vertical"
+                        android:hint="请选择项目"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="主机名称"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_zhujiming"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入名称"
+                        android:textSize="45px"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="主机类型"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/ck_liuliang"
+                        android:layout_width="55px"
+                        android:layout_height="55px"
+                        android:layout_marginLeft="20px"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:checked="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="流量版本"
+                        android:textSize="45px"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/ck_wifi"
+                        android:layout_width="55px"
+                        android:layout_height="55px"
+                        android:layout_marginLeft="30px"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:checked="false"
+
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="WiFi版本"
+                        android:textSize="45px"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="MAC地址"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="15px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_mac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:digits="0123456789abcdefghijklnmopqrstuvwxwzABCDEFGHIJKLNMOPQRSTUVWXWZ"
+                        android:gravity="center_vertical"
+                        android:hint="请输入主机的MAC地址"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textSize="45px"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="房屋信息"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20px">
+
+                        <TextView
+                            android:id="@+id/tv_loudong"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="20px"
+                            android:layout_weight="1"
+                            android:drawableRight="@mipmap/arrow_bottom"
+                            android:gravity="center"
+                            android:hint="选择楼栋"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_danyaun"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="20px"
+                            android:layout_weight="1"
+                            android:drawableRight="@mipmap/arrow_bottom"
+                            android:gravity="center"
+                            android:hint="选择单元"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_fanghao"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="20px"
+                            android:layout_weight="1"
+                            android:drawableRight="@mipmap/arrow_bottom"
+                            android:gravity="center"
+                            android:hint="选择房号"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="主机机主"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_guanliyuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:drawableRight="@mipmap/arrow_bottom"
+                        android:gravity="center_vertical"
+                        android:hint="请选择主机机主"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="开通类型"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/ck_gouji"
+                        android:layout_width="55px"
+                        android:layout_height="55px"
+                        android:layout_marginLeft="20px"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="购机开通"
+                        android:textSize="45px"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/ck_zulin"
+                        android:layout_width="55px"
+                        android:layout_height="55px"
+                        android:layout_marginLeft="30px"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:checked="false"
+
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="租赁开通"
+                        android:textSize="45px"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <!--<com.zhy.autolayout.AutoLinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="134px"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="40px"-->
+                <!--android:text="开通类型"-->
+                <!--/>-->
+
+                <!--<View-->
+                <!--android:layout_width="2px"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="45px"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:layout_marginRight="20px"-->
+                <!--android:layout_marginTop="45px"-->
+                <!--android:background="@color/color_999999"-->
+                <!--/>-->
+
+                <!--<RadioGroup-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--&gt;-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/radio1"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:button="@null"-->
+                <!--android:drawableLeft="@drawable/checkbox_selector"-->
+                <!--android:drawablePadding="15px"-->
+                <!--android:text="购机开通"-->
+                <!--android:textColor="?android:textColorSecondary"/>-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/radio2"-->
+                <!--android:layout_marginLeft="40px"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:button="@null"-->
+                <!--android:drawableLeft="@drawable/checkbox_selector"-->
+                <!--android:drawablePadding="15px"-->
+                <!--android:text="租赁开通"-->
+                <!--android:textColor="?android:textColorSecondary"/>-->
+                <!--</RadioGroup>-->
+                <!--</com.zhy.autolayout.AutoLinearLayout>-->
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="2px"-->
+                <!--android:background="@color/color_f0f0f0"-->
+                <!--/>-->
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="流量卡号"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="15px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_liuliangka"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:digits="0123456789abcdefghijklnmopqrstuvwxwzABCDEFGHIJKLNMOPQRSTUVWXWZ"
+                        android:gravity="center_vertical"
+                        android:hint="请输入流量卡卡号"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textSize="45px"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/color_f0f0f0"
+                    />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="134px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:text="备       注"
+                        />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="45px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="45px"
+                        android:background="@color/color_999999"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_beizhu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint=""
+                        android:textSize="45px"
+                        />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134px"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    android:layout_width="440px"
+                    android:layout_height="100px"
+                    android:background="@drawable/bg_maincolor"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+</com.zhy.autolayout.AutoLinearLayout>

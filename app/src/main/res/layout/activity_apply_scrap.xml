@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="26px"
+    tools:context="com.yxld.xzs.activity.Navigation.ApplyRepairActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:visibility="gone"
+        android:layout_width="1000px"
+        android:layout_height="96px"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:paddingLeft="32px"
+        android:paddingRight="32px">
+
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_bbbbbb"
+            android:text="请输入关键字"
+            android:textSize="36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/scsy_ss"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="26px"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+</com.zhy.autolayout.AutoLinearLayout>

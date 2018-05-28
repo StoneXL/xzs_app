@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.yxld.xzs.view.TabLayoutPlus
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#0FA4E5"
+        app:tabIndicatorColor="#0FA4E5"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="#7F7F7F">
+    </com.yxld.xzs.view.TabLayoutPlus>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+    </android.support.v4.view.ViewPager>
+
+</com.zhy.autolayout.AutoLinearLayout>

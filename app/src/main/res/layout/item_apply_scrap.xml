@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yxld.xzs.view.SlideItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="172px"
+    android:layout_marginBottom="26px"
+    >
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/item_apply_scrap_visible_content"/>
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="234px"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:background="@color/color_ff3b30"
+                />
+        </com.zhy.autolayout.AutoFrameLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.yxld.xzs.view.SlideItem>

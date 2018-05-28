@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yxld.xzs.view.AutoCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="40px"
+    android:layout_marginRight="40px"
+    android:layout_marginTop="32px"
+    android:layout_marginBottom="32px"
+    app:cardCornerRadius="5px"
+    app:cardElevation="2dp"
+    >
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125px"
+            android:background="@drawable/bg_dash_red"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <com.yxld.xzs.view.LeftImgTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:left_drawable="@mipmap/icon_patrol"
+                app:right_text="巡检安排" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="开始时间" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="截至时间" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_patrol_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="巡检路线" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_plan_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="计划名称" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_patrol_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="巡检人员" />
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160px"
+            android:background="@drawable/bg_dash_3lines_gray">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/btn_detail_way"
+                android:layout_width="322px"
+                android:layout_height="98px"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_red_radius_8px"
+                android:clickable="false"
+                >
+
+                <com.yxld.xzs.view.LeftImgTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:left_drawable="@mipmap/icon_patrol_line"
+                    app:right_text="具体路线"
+                    app:right_text_size="46px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoFrameLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.yxld.xzs.view.AutoCardView>

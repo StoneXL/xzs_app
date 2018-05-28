@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40px"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@drawable/line_dash_color_dddddd"
+            android:layerType="software" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_line_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="线路名称" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_serial_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="巡检序列号" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_check_point_charset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="巡检点编码" />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_check_point_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="巡检点地址"
+            />
+
+        <com.yxld.xzs.view.AlignLeftRightTextView
+            android:id="@+id/tv_check_point_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_text="打卡时间"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:background="@color/color_ff5654"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        >
+        <com.yxld.xzs.view.LeftImgTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:right_text="巡检情况记录"
+            app:right_text_color="@color/white"
+            app:left_drawable="@mipmap/icon_team_task"
+            android:layout_gravity="center_vertical"
+            />
+    </com.zhy.autolayout.AutoFrameLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="LinearLayoutManager"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_Shijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="LinearLayoutManager"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="LinearLayoutManager"
+        />
+</com.zhy.autolayout.AutoLinearLayout>
+

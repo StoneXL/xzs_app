@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40px"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:background="@drawable/line_dash_color_dddddd"
+                android:layerType="software" />
+
+            <com.yxld.xzs.view.AlignLeftRightTextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:left_text="巡检开始时间" />
+
+            <com.yxld.xzs.view.AlignLeftRightTextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:left_text="最终截至时间" />
+
+            <com.yxld.xzs.view.AlignLeftRightTextView
+                android:id="@+id/tv_doing_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:left_text="已进行" />
+
+            <com.yxld.xzs.view.AlignLeftRightTextView
+                android:id="@+id/tv_rest_check_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:left_text="剩余巡检点" />
+
+            <com.yxld.xzs.view.AlignLeftRightTextView
+                android:id="@+id/tv_uncompleted_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:left_text="未完成记录" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <include layout="@layout/layout_patrol_flow"/>
+
+        <TextView
+            android:id="@+id/tv_upload_data"
+            android:layout_width="820px"
+            android:layout_height="130px"
+            android:background="@drawable/shape_btn_start_patrol_select"
+            android:textSize="40px"
+            android:text="提交数据"
+            android:gravity="center"
+            android:layout_marginTop="110px"
+            android:textColor="@color/white"
+            android:clickable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="130px"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+</android.support.v4.widget.NestedScrollView>
+

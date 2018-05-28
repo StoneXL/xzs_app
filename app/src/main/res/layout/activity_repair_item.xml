@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/drawer_white">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/repair_news"
+        android:layout_width="match_parent"
+        android:layout_height="176px"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/repair_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="42px"
+            android:text="报修单号"
+            android:textColor="@color/repair_black"
+            android:textSize="36px" />
+
+
+        <TextView
+            android:id="@+id/repair_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/repair_single"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="28px"
+            android:text="报修时间"
+            android:textColor="@color/repair_gray"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/repair_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/repair_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40px"
+            android:text="未处理"
+            android:textColor="@color/repair_blue"
+            android:textSize="40px" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="40px"
+        android:background="@color/repair_line" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/repair_location"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:src="@mipmap/icon_location" />
+
+        <TextView
+            android:id="@+id/repair_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/repair_location"
+            android:layout_marginLeft="12px"
+            android:text="报修时间"
+            android:textSize="40px"
+            android:textColor="@color/repair_black"
+            android:layout_toRightOf="@+id/repair_location" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="26px"
+        android:background="@color/repair_blank" />
+
+
+</com.zhy.autolayout.AutoLinearLayout>

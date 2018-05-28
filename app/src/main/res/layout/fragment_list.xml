@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34px"
+            android:layout_marginRight="34px"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="34px"
+            android:paddingRight="34px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34px"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/repair_material_text2"
+                    android:layout_width="wrap_content"
+                    android:text="项       目："/>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34px"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/repair_material_text2"
+                        android:layout_width="wrap_content"
+                        android:text="材料费："/>
+
+                    <TextView
+                        android:id="@+id/tv_apply_name"
+                        style="@style/repair_material_text1"
+                        android:layout_marginLeft="38px"
+                        android:text="向既群"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:layout_marginLeft="34px"
+                        android:text="人工费："/>
+
+                    <TextView
+                        android:id="@+id/tv_apply_department"
+                        style="@style/repair_material_text1"
+                        android:text="客服部"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34px"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:layout_width="wrap_content"
+                        android:text="其他项："/>
+
+                    <TextView
+                        android:id="@+id/tv_accept_name"
+                        style="@style/repair_material_text1"
+                        android:layout_marginLeft="38px"
+                        android:text="向既群"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/repair_material_text2"
+                        android:layout_marginLeft="34px"
+                        android:text="税费："/>
+
+                    <TextView
+                        android:id="@+id/tv_accept_department"
+                        style="@style/repair_material_text1"
+                        android:text="客服部"/>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="34px"
+                android:layout_marginTop="46px"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/repair_material_text2"
+                    android:text="合计："/>
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    style="@style/repair_material_text1"
+                    android:layout_marginLeft="38px"
+                    android:lines="1"
+                    android:text="王五"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:layout_width="290px"
+            android:layout_height="75px"
+            android:layout_marginLeft="21px"
+            android:layout_marginTop="24px"
+            android:background="@mipmap/spxq"
+            android:gravity="center"
+            android:text="维修费用"
+            android:textColor="@color/white"
+            android:textSize="44px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="34px"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <!--item的padding为34px-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="290px"
+            android:layout_height="70px"
+            android:layout_marginLeft="21px"
+            android:layout_marginTop="24px"
+            android:background="@mipmap/splb"
+            android:gravity="center"
+            android:text="物料清单"
+            android:textColor="@color/white"
+            android:textSize="44px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_change"
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="修改"
+        android:textColor="@color/white"/>
+</com.zhy.autolayout.AutoLinearLayout>

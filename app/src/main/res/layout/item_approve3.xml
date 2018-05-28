@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="36px"
+        android:paddingRight="36px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="270px"
+                android:layout_height="60px"
+                android:background="@mipmap/msgfour"
+                android:gravity="center"
+                android:text="申购审批"
+                android:textColor="@color/white"
+                android:textSize="40px"/>
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20px"
+                android:textColor="@color/color_0079c2"
+                android:textSize="45px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/approve_text_1"
+                android:text="类型名称:"/>
+
+            <TextView
+                android:id="@+id/tv_type_program"
+                style="@style/approve_text_2"
+                android:text="凯母国际"
+                android:textColor="@color/color_323232"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/approve_text_1"
+                android:text="申请项目:"/>
+
+            <TextView
+                android:id="@+id/tv_program"
+                style="@style/approve_text_2"
+                android:text="凯母国际"
+                android:textColor="@color/color_323232"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/approve_text_1"
+                android:text="申请时间:"/>
+
+            <TextView
+                android:id="@+id/tv_approve_time"
+                style="@style/approve_text_2"
+                android:text="2017-03-06 09:57:34"
+                android:textColor="@color/color_909090"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24px"
+            android:layout_marginTop="24px"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/approve_text_1"
+                android:text="申 请 人  :"/>
+
+            <TextView
+                android:id="@+id/tv_approve_name"
+                style="@style/approve_text_2"
+                android:text="周驰"
+                android:textColor="@color/color_909090"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

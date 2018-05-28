@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/iv_goods_icon"
+        android:layout_width="64px"
+        android:layout_height="64px"
+        android:src="@mipmap/goods"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24px"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text=""
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/color_fc8d18"
+        android:textSize="44px"/>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="300px"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30px">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/color_fc8d18"
+            android:textSize="44px"/>
+
+        <TextView
+            android:id="@+id/tv_unit_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/color_fc8d18"
+            android:textSize="44px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>
+    <!--
+    <com.zhy.autolayout.AutoRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_goods_icon"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:src="@mipmap/goods"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24px"
+            android:layout_toRightOf="@id/iv_goods_icon"
+            android:width="396px"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="斯蒂芬斯蒂芬斯蒂芬订单是否是非得失斯蒂芬斯蒂芬斯蒂芬的盛世嫡妃"
+            android:textColor="@color/color_fc8d18"
+            android:textSize="44px"/>
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="120px"
+            android:layout_toLeftOf="@id/tv_unit_price"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="X45"
+            android:textColor="@color/color_fc8d18"
+            android:textSize="44px"/>
+
+        <TextView
+            android:id="@+id/tv_unit_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="5465"
+            android:textColor="@color/color_fc8d18"
+            android:textSize="44px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>-->

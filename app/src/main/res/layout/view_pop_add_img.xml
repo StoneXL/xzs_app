@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_transparent"
+    >
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_pop_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="请选择盘点类型"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_album"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="1px"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="商城可售"
+            />
+
+        <TextView
+            android:id="@+id/tv_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="1px"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="内部使用"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="12px"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/drawer_blue_new"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

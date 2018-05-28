@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/repair"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/repair_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间" />
+
+    <TextView
+        android:id="@+id/repair_address"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/repair_time"
+        android:layout_height="wrap_content"
+        android:text="地址" />
+
+    <TextView
+        android:id="@+id/repair_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repair_address"
+        android:text="报修人姓名" />
+
+    <TextView
+        android:id="@+id/repair_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repair_name"
+        android:text="电话" />
+
+    <TextView
+        android:id="@+id/repair_depict"
+        android:layout_below="@+id/repair_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="说明" />
+
+
+    <TextView
+        android:id="@+id/repair_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:gravity="center"
+        android:text="附图"
+        android:layout_below="@+id/repair_depict"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/repair_image"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_above="@+id/repair_upload"
+        android:layout_toEndOf="@+id/repair_depict" />
+
+
+    <TextView
+        android:id="@+id/repair_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="300px"
+        android:gravity="center"
+        android:text="上传图片"
+        android:layout_below="@+id/repair_photos"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/repair_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_below="@+id/repair_image"
+        android:layout_toEndOf="@+id/repair_upload" />
+
+    <Button
+        android:id="@+id/repair_button"
+        android:layout_below="@+id/repair_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交审核" />
+</com.zhy.autolayout.AutoRelativeLayout>

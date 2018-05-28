@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/fl_my_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/iv_shoudiantong"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_above="@+id/tv_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50px"
+        android:src="@mipmap/shoudiantong_off"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_input"
+        android:layout_marginBottom="30px"
+        android:gravity="center"
+        android:text="请将二维码放入扫码框内"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_666"
+        android:cursorVisible="false"
+        android:singleLine="true"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="手动输入条形码"
+        android:maxEms="11"
+        android:padding="30px"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="60px"/>
+
+    <TextView
+        android:id="@+id/tv_queding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30px"
+        android:background="@drawable/bg_666"
+        android:padding="30px"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="60px"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_fc8d18"
+            android:gravity="center"
+            android:text="结束盘点"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="未盘点列表"
+            android:textColor="@color/white"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

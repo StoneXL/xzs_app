@@ -1,0 +1,319 @@
+<resources>
+
+    <!-- Toolbar theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="colorAccent">@color/toolbar_color</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="android:windowAnimationStyle">@style/AnimaActivity</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/background_logo</item>
+    </style>
+
+    <style name="AnimaActivity">
+        <item name="android:activityOpenEnterAnimation">@anim/translate_right_to_center</item>
+        <item name="android:activityOpenExitAnimation">@anim/translate_center_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/translate_left_to_center</item>
+        <item name="android:activityCloseExitAnimation">@anim/translate_center_to_right</item>
+    </style>
+    <!-- ToolbarMenu Size. -->
+    <style name="MenuTextStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- tablayout. -->
+    <style name="TabLayoutPlus_DAFULT">
+        <item name="subTextSize">9sp</item>
+        <item name="countTextSize">11sp</item>
+        <item name="countTextBackground">@drawable/tablayout_badged_count</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- 设置弹出窗口的属性，frame叠加，isfloat是否浮动，tarnslucent是否半透明，dim是背景是否变暗 -->
+    <style name="Theme_audioDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--图片放大 -->
+    <style name="translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">false</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 退出时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置是否出现阴影部分 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- dialog的进入和退出效果 -->
+    <style name="addresspickerstyle" parent="android:Animation">
+        <item name="android:backgroundDimAmount">0.6</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 退出时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 充满屏幕 -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 背景是否模糊显示 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 公共监控 -->
+    <style name="LoadingTextView">
+        <item name="textStyle">vertical</item>
+        <item name="textColor">@color/gray_text</item>
+        <item name="textSize">12sp</item>
+        <item name="textPadding">5dp</item>
+        <item name="android:text">@string/loading_text_default</item>
+    </style>
+
+    <style name="LoadingTextView_Percent" parent="LoadingTextView">
+        <item name="textPadding">10dp</item>
+        <item name="textSize">15sp</item>
+        <item name="android:text" />
+    </style>
+
+    <style name="TitleBar_Dark">
+        <item name="textColor">@android:color/white</item>
+        <item name="background">@color/dark_bg_70p</item>
+        <item name="backButton">@drawable/message_back_selector</item>
+    </style>
+
+    <style name="TextView30_909090">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">30px</item>
+        <item name="android:textColor">@color/color_909090</item>
+    </style>
+
+    <style name="TextView36_909090">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">36px</item>
+        <item name="android:textColor">@color/color_909090</item>
+    </style>
+
+    <style name="TextView40_909090">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40px</item>
+        <item name="android:textColor">@color/color_909090</item>
+    </style>
+
+    <style name="TextView30_646464">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">30px</item>
+        <item name="android:textColor">@color/color_646464</item>
+    </style>
+
+    <style name="TextView40_646464">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40px</item>
+        <item name="android:textColor">@color/color_646464</item>
+    </style>
+
+    <style name="TextView40_323232">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40px</item>
+        <item name="android:textColor">@color/color_323232</item>
+    </style>
+
+    <style name="Line1040_right">
+        <item name="android:layout_width">1040px</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/color_d6d7dc</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="MyCustomTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+    </style>
+
+
+    <style name="TextView44_666666">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">44px</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line1</item>
+    </style>
+
+    <style name="AppTheme.NoBackground">
+        <!--<item name="windowBackground">@android:color/transparent</item>-->
+        <!--<item name="colorBackgroundCacheHint">@null</item>-->
+        <!--<item name="windowIsTranslucent">true</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--<item name="windowContentOverlay">@null</item>-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 加载进度弹窗样式. -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="layout_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">28px</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <!--首页工作台图标-->
+    <style name="workbench_image">
+        <item name="android:layout_width">150px</item>
+        <item name="android:layout_height">150px</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">20px</item>
+    </style>
+
+    <!--首页工作台文字-->
+    <style name="workbench_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">24px</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:textSize">39px</item>
+    </style>
+
+    <!--首页工作台小红点-->
+    <style name="workbench_redpoint">
+        <item name="android:layout_width">50px</item>
+        <item name="android:layout_height">50px</item>
+        <item name="android:layout_marginLeft">-35px</item>
+        <item name="android:background">@drawable/red_dot_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">25px</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="approve_text_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColor">@color/color_909090</item>
+        <item name="android:textSize">45px</item>
+    </style>
+
+    <style name="approve_text_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30px</item>
+        <item name="android:lines">1</item>
+
+        <item name="android:textSize">45px</item>
+    </style>
+
+    <style name="repair_material_text1">
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginLeft">34px</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_646464</item>
+        <item name="android:textSize">44px</item>
+    </style>
+
+    <style name="repair_material_text2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">44px</item>
+    </style>
+
+    <!--夜间订单、夜间出库单列表item-->
+    <style name="item_nightorder_list_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">46px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="item_nightorder_list_tex1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_909090</item>
+        <item name="android:textSize">44px</item>
+    </style>
+
+    <style name="item_nightorder_list_text2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">34px</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:textSize">44px</item>
+    </style>
+
+    <style name="item_nightorder_list_text3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/color_337CDF</item>
+        <item name="android:textSize">44px</item>
+    </style>
+
+</resources>

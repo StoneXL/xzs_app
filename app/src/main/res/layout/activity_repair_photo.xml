@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="204px"
+    android:layout_height="204px"
+
+    android:layout_centerInParent="true">
+
+    <ImageView
+        android:id="@+id/photo_image"
+        android:layout_width="204px"
+        android:layout_height="204px"
+        android:scaleType="centerCrop"
+        android:src="@color/image_color" />
+
+    <ImageView
+        android:id="@+id/photo_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:scaleType="center"
+        android:src="@mipmap/icon_delete" />
+
+</com.zhy.autolayout.AutoFrameLayout>

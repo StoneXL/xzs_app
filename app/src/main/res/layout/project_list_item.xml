@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20px"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/xiangmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/loudong"
+        android:text="中远公馆"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px"
+        android:drawablePadding="20px"
+        android:gravity="center_vertical"
+        android:drawableRight="@mipmap/icon_arrow_r"
+        android:layout_marginRight="40px"
+        android:layout_marginLeft="40px"
+        />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">60px</dimen>
+    <dimen name="nav_header_height">600px</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="size_9">9sp</dimen>
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="size_13">13sp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="size_15">15sp</dimen>
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="size_18">18sp</dimen>
+    <dimen name="ui_10_dip">10dip</dimen>
+
+    <dimen name="toolbar_padding_top">0dp</dimen>
+    <dimen name="item_horizontal_space">14dp</dimen>
+    <dimen name="item_vertical_space">6dp</dimen>
+    <dimen name="item_horizontal_padding">8dp</dimen>
+    <dimen name="item_vertical_padding">6dp</dimen>
+    <dimen name="realplay_text_size">12dp</dimen>
+
+    <!-- 回放列表 -->
+    <dimen name="remotelist_time_text_size">9dp</dimen>
+    <dimen name="remotelist_item_local_time_size">12dp</dimen>
+    <dimen name="remotelist_item_more_text_size">15dp</dimen>
+    <dimen name="remotelist_num_tip_size">12dp</dimen>
+
+    <!-- realplay text size -->
+    <dimen name="realplay_tip_text_size">16dp</dimen>
+    <dimen name="realplay_channel_text_size">9dp</dimen>
+    <dimen name="realplay_button_text_size">15dp</dimen>
+    <dimen name="realplay_ratio_text_size">24dp</dimen>
+    <dimen name="leavemessage_text_size">12dp</dimen>
+    <dimen name="remoteplayback_text_size">12dp</dimen>
+    <dimen name="remoteplayback_tip_text_size">16dp</dimen>
+    <dimen name="remoteplayback_channel_text_size">9dp</dimen>
+    <dimen name="remoteplayback_button_text_size">15dp</dimen>
+    <dimen name="remoteplayback_ratio_text_size">24dp</dimen>
+</resources>

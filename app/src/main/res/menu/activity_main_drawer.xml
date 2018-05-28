@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_income"
+        android:icon="@mipmap/nav_income"
+        android:title="我的收入" />
+    <item
+        android:id="@+id/nav_summary"
+        android:icon="@mipmap/nav_summary"
+        android:title="工作汇总" />
+
+    <item
+        android:id="@+id/nav_quard"
+        android:icon="@mipmap/nav_quard"
+        android:title="特殊门禁" />
+
+    <item
+        android:id="@+id/nav_night"
+        android:icon="@mipmap/nav_night"
+        android:title="通知管理" />
+
+
+    <item
+        android:id="@+id/nav_approval"
+        android:icon="@mipmap/nav_approval"
+        android:title="报修审批" />
+
+    <item
+        android:id="@+id/nav_invitation"
+        android:icon="@mipmap/nav_invitation"
+        android:title="区域监控" />
+    <item
+        android:id="@+id/nav_customer"
+        android:icon="@mipmap/nav_customer"
+        android:title="联系客服" />
+
+</menu>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingLeft="44px"
+    android:paddingRight="44px"
+    android:paddingTop="34px">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="46px"
+        android:paddingLeft="34px"
+        android:paddingRight="34px"
+        android:paddingTop="24px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/getgoods"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="88px"
+                android:text="凯母国际"
+                android:textColor="@color/color_000033"
+                android:textSize="52px"/>
+
+           <!-- <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/color_ff4141"
+                android:textSize="44px"/>-->
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/sendgoods"/>
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="88px"
+                android:layout_marginTop="24px"
+                android:text="凯母国际"
+                android:textColor="@color/color_000033"
+                android:textSize="52px"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="44px">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/atll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/color_eeeeee"/>
+
+            <ImageButton
+                android:id="@+id/ib_isshow"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@mipmap/open_"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/color_eeeeee"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <ImageView
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/sendtime"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="88px"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textSize="44px"/>
+
+            <!--android:text="配送费 ¥ 102"-->
+            <TextView
+                android:id="@+id/tv_delivery_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/color_ff4141"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <Button
+            android:id="@+id/bt_rob"
+            android:layout_width="match_parent"
+            android:layout_height="92px"
+            android:layout_marginTop="70px"
+            android:background="@mipmap/sendbtnsure"
+            android:text="抢单"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/autosend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70px"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/bt_phone"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_weight="1"
+                android:background="@mipmap/callbtn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="44px"
+                    android:layout_height="44px"
+                    android:src="@mipmap/cellphone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="联系买家"
+                    android:textColor="@color/white"
+                    android:textSize="44px"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_marginLeft="20px"
+                android:layout_weight="1"
+                android:background="@mipmap/bg_button_big"
+                android:text="确认送达"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/auto_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70px"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/bt_client_phone"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_marginLeft="20px"
+                android:layout_weight="1"
+                android:background="@mipmap/connectkehu"
+                android:text="联系客户"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+
+            <Button
+                android:id="@+id/bt_shop_phone"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_marginLeft="20px"
+                android:layout_weight="1"
+                android:background="@mipmap/connectsj"
+                android:text="联系商家"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+
+            <Button
+                android:id="@+id/bt_confirm_delivery"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_marginLeft="20px"
+                android:layout_weight="1"
+                android:background="@mipmap/surequhuo"
+                android:text="确认取货"
+                android:textColor="@color/white"
+                android:textSize="44px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/autosend_rim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70px"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/bt_phone_buy"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_weight="1"
+                android:background="@mipmap/callbtn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="44px"
+                    android:layout_height="44px"
+                    android:src="@mipmap/cellphone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="联系买家"
+                    android:textColor="@color/white"
+                    android:textSize="44px"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/bt_phone_sell"
+                android:layout_width="0dp"
+                android:layout_height="92px"
+                android:layout_weight="1"
+                android:layout_marginLeft="20px"
+                android:background="@mipmap/bg_button_big"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="44px"
+                    android:layout_height="44px"
+                    android:src="@mipmap/cellphone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="联系商家"
+                    android:textColor="@color/white"
+                    android:textSize="44px"/>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

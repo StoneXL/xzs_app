@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yxld.xzs.view.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="0dp">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:padding="40px">
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/TextView44_666666"
+                android:text="7月25日 18:00" />
+        </com.zhy.autolayout.AutoFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:background="@drawable/line_dash_color_dddddd"
+            android:layerType="software" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            />
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.yxld.xzs.view.AutoCardView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yxld.xzs.view.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30px"
+    android:clickable="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/send_address"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="700px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:paddingTop="30px"
+            android:text="和庄A1栋2716"
+            android:textColor="@color/text_black"
+            android:textSize="50px" />
+
+
+        <TextView
+            android:id="@+id/send_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginEnd="50px"
+            android:text="¥5.9"
+            android:textColor="@color/text_red"
+            android:textSize="50px"
+            android:layout_alignParentRight="true" />
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/send_address"
+            android:layout_below="@+id/send_address"
+            android:layout_marginBottom="30px"
+            android:layout_marginTop="30px">
+
+            <TextView
+                android:id="@+id/send_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:textSize="45px" />
+
+
+            <TextView
+                android:id="@+id/send_amount"
+                android:layout_toLeftOf="@+id/send_total"
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:textSize="45px" />
+
+            <TextView
+                android:id="@+id/send_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="50px"
+                android:textColor="@color/text_black"
+                android:textSize="45px" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/send_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/details"
+            android:layout_below="@+id/details"
+            android:layout_marginBottom="30px"
+            android:background="@drawable/shap_text"
+            android:text="用户下单时间11:21"
+            android:textColor="@color/text_orange"
+            android:textSize="35px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_below="@+id/send_time"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:id="@+id/send_tel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:background="@drawable/button_tel_shap"
+                android:lineSpacingMultiplier="1"
+                android:text="18975135973"
+                android:textColor="@color/text_orange" />
+
+            <Button
+                android:id="@+id/send_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="50px"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="确定送达"
+                android:textColor="@color/drawer_white" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.yxld.xzs.view.AutoCardView>

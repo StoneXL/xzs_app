@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yxld.xzs.activity.Navigation.ApplyRepairCheckMaterialActivity">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_btn_container"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="136px">
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:text="确认报修出库"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/color_0079C2"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:text="取消出库"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/color_c7c7cc"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_above="@id/ll_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+</com.zhy.autolayout.AutoRelativeLayout>

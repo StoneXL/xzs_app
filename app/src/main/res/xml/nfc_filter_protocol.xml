@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    >
+    <!-- 读NFC卡的类型 -->
+    <tech-list>
+        <tech>android.nfc.tech.MifareUltralight</tech>
+    </tech-list>
+    <tech-list>
+        <tech>android.nfc.tech.MifareClassic</tech>
+    </tech-list>
+    <tech-list>
+        <tech>android.nfc.tech.IsoDep</tech>
+    </tech-list>
+    <tech-list>
+        <tech>android.nfc.tech.Ndef</tech>
+    </tech-list>
+    <tech-list>
+        <tech>android.nfc.tech.NfcA</tech>
+    </tech-list>
+
+    <!-- 一个tech-lis一组，只有当Tag中的List完全匹配一个tech-list时，系统才会t为调用该Activity -->
+    <!--<tech-list>-->
+        <!--<tech>android.nfc.tech.MifareClassic</tech>-->
+        <!--<tech>android.nfc.tech.NfcA</tech>-->
+        <!--<tech>android.nfc.tech.Ndef</tech>-->
+    <!--</tech-list>-->
+
+    <!--<tech-list>-->
+        <!--<tech>android.nfc.tech.MifareClassic</tech>-->
+        <!--<tech>android.nfc.tech.NfcA</tech>-->
+        <!--<tech>android.nfc.tech.NdefFormatable</tech>-->
+    <!--</tech-list>-->
+</resources>

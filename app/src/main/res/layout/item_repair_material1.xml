@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="34px"
+    android:paddingLeft="34px"
+    android:paddingTop="34px">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/repair_material_text2"
+            android:text="物资名称："/>
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            style="@style/repair_material_text1"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46px"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/repair_material_text2"
+                android:text="规格："/>
+
+            <TextView
+                android:id="@+id/tv_unit"
+                style="@style/repair_material_text1"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/repair_material_text2"
+                android:text="数量："/>
+
+            <TextView
+                android:id="@+id/tv_num"
+                style="@style/repair_material_text1"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_marginTop="34px"
+        android:background="@color/color_e5e5e5"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

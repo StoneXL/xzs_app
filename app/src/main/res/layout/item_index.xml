@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="234px"
+    android:background="@color/white"
+
+    >
+
+    <ImageView
+        android:id="@+id/iv_index_head"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_marginLeft="36px"
+        android:layout_marginTop="48px"
+        />
+
+    <TextView
+        android:id="@+id/tv_zhuangtai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_index_head"
+        android:layout_marginLeft="36px"
+        android:layout_toRightOf="@id/iv_index_head"
+        android:text=""
+        android:textColor="#333333"
+        android:textSize="54px"
+        />
+
+    <TextView
+        android:id="@+id/tv_songzhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_index_head"
+        android:layout_marginLeft="36px"
+        android:layout_toRightOf="@id/iv_index_head"
+        android:text="送至："
+        android:textColor="#666666"
+        android:textSize="45px"
+        />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_index_head"
+        android:layout_toRightOf="@id/tv_songzhi"
+        android:text=""
+        android:textColor="#999999"
+        android:textSize="45px"
+        />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="55px"
+        android:layout_height="55px"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_address"
+        android:layout_marginRight="36px"
+        android:background="@drawable/bg_color_red_oval"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="32px"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_total_no"
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_address"
+        android:layout_marginRight="36px"
+        android:background="@drawable/bg_color_red_oval"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="222px"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_zhuangtai"
+        android:layout_marginRight="36px"
+        android:text=""
+        android:textColor="#999999"
+        android:textSize="36px"
+        />
+</com.zhy.autolayout.AutoRelativeLayout>

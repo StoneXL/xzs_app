@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    style="@style/background">
+    <include
+        layout="@layout/recyceler_layout" />
+</com.zhy.autolayout.AutoLinearLayout>
