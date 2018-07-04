@@ -76,7 +76,7 @@ public class IndexFragment extends BaseFragment implements SwipeRefreshLayout.On
         super.onCreate(savedInstanceState);
         EventBus.getDefault().register(this);
 
-        setHasOptionsMenu(true);
+        // TODO: 2018/7/4  setHasOptionsMenu(true);
     }
 
     @Nullable
