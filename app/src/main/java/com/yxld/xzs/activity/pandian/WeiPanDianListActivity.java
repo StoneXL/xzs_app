@@ -43,7 +43,6 @@ public class WeiPanDianListActivity extends BaseActivity implements SwipeRefresh
 
     private View loadingView, notDataView;
     private WeiPanDianAdapter weiPanDianAdapter;
-
     private List<PanDianBean> panDianList = new ArrayList<>();
     private int page;//分页数
     private int rows = 3;//每页加载数

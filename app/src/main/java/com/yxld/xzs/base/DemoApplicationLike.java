@@ -85,6 +85,7 @@ public class DemoApplicationLike extends Application {
 
     //公共安防
     public static String AppKey = "13edae3069574e6bad0c49474b9344da";
+    public static String AppSecret = "8b2ee852dadd753b8138494800b4afe7";
 
     public static EZOpenSDK getOpenSDK() {
         return EZOpenSDK.getInstance();

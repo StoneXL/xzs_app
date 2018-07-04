@@ -18,8 +18,8 @@ public interface API {
      * 测试 （晓燕）
      */
     String BASE_PANDIAN = "http://192.168.8.132:8080/";//盘点 不要wygl 擦
-    String IP_PRODUCT = "http://192.168.8.132:8080/wygl";
-    String BASE_URL_2 = "http://192.168.8.132:8080/wygl/";
+//    String IP_PRODUCT = "http://192.168.8.132:8080/wygl";
+//    String BASE_URL_2 = "http://192.168.8.132:8080/wygl/";
     /**
      * 测试 （吴芳）
      */
@@ -34,8 +34,8 @@ public interface API {
     /**
      * 线上
      */
-//    String IP_PRODUCT = "http://wy.iot.xin";
-//    String BASE_URL_2 = "http://wy.iot.xin/";
+    String IP_PRODUCT = "http://wy.iot.xin";
+    String BASE_URL_2 = "http://wy.iot.xin/";
 
 
     String BASE_URL = IP_PRODUCT + "/";
@@ -219,4 +219,23 @@ public interface API {
      * 未盘点列表
      */
     String WEI_PANDIAN_LIST = BASE_PANDIAN+ "cxwy_web/pandian/app/goods";
+    /**
+     * 盘点异常列表或结束盘点前盘点异常确认
+     */
+    String PANDIAN_YICHANG = BASE_PANDIAN+"cxwy_web/pandian/app/yichangs";
+    /**
+     * 确认（修改）单条异常盘点
+     */
+    //cxwy_web/pandian/app/yichangs/{yichangId}/details
+    String CONFIRM_YICHANG_ITEM = BASE_PANDIAN + "cxwy_web/pandian/app/yichangs/{yichangId}/details";
+    /**
+     * 结束异常盘点
+     */
+    String FINISH_YICHANG = BASE_PANDIAN + "cxwy_web/pandian/app/yichangs/";
+    /**
+     * 确认盘点
+     */
+    String FINISH_PANDIAN = BASE_PANDIAN + "cxwy_web/pandian/app/{pandianId}/";
+
+
 }

@@ -3,6 +3,7 @@ package com.yxld.xzs.activity.pandian;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -13,13 +14,25 @@ import com.uuzuche.lib_zxing.activity.CaptureFragment;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.yxld.xzs.R;
 import com.yxld.xzs.base.BaseActivity;
+import com.yxld.xzs.contain.Contains;
+import com.yxld.xzs.entity.BaseBack;
+import com.yxld.xzs.entity.RimOrderBean;
+import com.yxld.xzs.entity.RimOrderListBean;
+import com.yxld.xzs.http.api.HttpAPIWrapper;
 import com.yxld.xzs.utils.StringUitl;
 import com.yxld.xzs.utils.ToastUtil;
 import com.zhy.autolayout.AutoFrameLayout;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 
 
 /**
@@ -111,6 +124,7 @@ public class SaoMaActivity extends BaseActivity {
                 startActivity(intent);
                 break;
             case R.id.tv_one:
+                yichangConfirm();
                 break;
             case R.id.tv_two:
                 intent = new Intent(this, WeiPanDianListActivity.class);
@@ -120,6 +134,43 @@ public class SaoMaActivity extends BaseActivity {
             default:
                 break;
         }
+    }
+
+    /**
+     * 盘点异常确认
+     */
+    private void yichangConfirm() {
+        Map<String, String> map = new HashMap<>();
+        map.put("uuId", Contains.uuid);
+        map.put("pandianId", pandianId);
+        Disposable disposable = HttpAPIWrapper.getInstance(HttpAPIWrapper.getOkHttpClient())
+                .yiChangBeforConfirm(map)
+                .subscribe(new Consumer<BaseBack>() {
+                    @Override
+                    public void accept(@NonNull BaseBack data) throws Exception {
+
+                        Log.e("wh", "加载完成" + data.toString());
+                        if (data.status == 1) {
+                            // TODO: 2018/5/28 成功跳异常列表页面
+                            startYiChang();
+                        } else {
+                            // TODO: 2018/5/28  还有未盘点列表未完成
+                            onError(data.status, data.msg);
+                        }
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(@NonNull Throwable throwable) throws Exception {
+                        Log.e("wh", "结束盘点, 准备进行盘点异常确认 "+"失败");
+                    }
+                });
+        disposables.add(disposable);
+    }
+
+    private void startYiChang() {
+        Intent intent = new Intent(this, PanDianYiChangListActivity.class);
+        intent.putExtra("pandianId", pandianId);
+        startActivity(intent);
     }
 
     @Override

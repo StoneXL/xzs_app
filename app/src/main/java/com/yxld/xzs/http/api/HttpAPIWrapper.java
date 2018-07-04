@@ -26,6 +26,7 @@ import com.yxld.xzs.entity.NightWarehouseDetail;
 import com.yxld.xzs.entity.NightWarehouseListBean;
 import com.yxld.xzs.entity.PanDian;
 import com.yxld.xzs.entity.PanDianDetail;
+import com.yxld.xzs.entity.PanDianYichangListBean;
 import com.yxld.xzs.entity.RimOrderListBean;
 import com.yxld.xzs.entity.RobBean;
 import com.yxld.xzs.entity.SenderListBean;
@@ -408,6 +409,23 @@ public class HttpAPIWrapper {
     public Observable<BaseBack> confirmPandian(Map data) {
         return wrapper(mHttpAPI.confirmPandian(data).compose(SCHEDULERS_TRANSFORMER));
     }
+    public Observable<PanDianYichangListBean> yiChangPanDianList(Map data) {
+        return wrapper(mHttpAPI.yiChangPanDianList(data).compose(SCHEDULERS_TRANSFORMER));
+    }
+    public Observable<BaseBack> yiChangBeforConfirm(Map data) {
+        return wrapper(mHttpAPI.yiChangBeforConfirm(data).compose(SCHEDULERS_TRANSFORMER));
+    }
+    public Observable<BaseBack> confirmYiChang(String yichangId,Map data) {
+        return wrapper(mHttpAPI.confirmYiChang(yichangId,data).compose(SCHEDULERS_TRANSFORMER));
+    }
+    public Observable<BaseBack> finishYiChang(Map data) {
+        return wrapper(mHttpAPI.finishYiChang(data).compose(SCHEDULERS_TRANSFORMER));
+    }
+    public Observable<BaseBack> confirmPanDian(String pandianId,Map data) {
+        return wrapper(mHttpAPI.confirmPanDian(pandianId,data).compose(SCHEDULERS_TRANSFORMER));
+    }
+
+
     //*************************************更新的接口*********************************//
     /**
      * 给任何Http的Observable加上通用的线程调度器

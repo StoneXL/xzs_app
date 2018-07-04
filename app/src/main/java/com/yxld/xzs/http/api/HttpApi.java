@@ -22,6 +22,7 @@ import com.yxld.xzs.entity.NightWarehouseDetail;
 import com.yxld.xzs.entity.NightWarehouseListBean;
 import com.yxld.xzs.entity.PanDian;
 import com.yxld.xzs.entity.PanDianDetail;
+import com.yxld.xzs.entity.PanDianYichangListBean;
 import com.yxld.xzs.entity.RimOrderListBean;
 import com.yxld.xzs.entity.RobBean;
 import com.yxld.xzs.entity.SenderListBean;
@@ -82,8 +83,11 @@ import static com.yxld.xzs.http.api.API.CONFIRMFUZE;
 import static com.yxld.xzs.http.api.API.CONFIRMROB;
 import static com.yxld.xzs.http.api.API.CONFIRMSEND;
 import static com.yxld.xzs.http.api.API.CONFIRM_PANDIAN;
+import static com.yxld.xzs.http.api.API.CONFIRM_YICHANG_ITEM;
 import static com.yxld.xzs.http.api.API.CONFRIMNIGHTWAREHOUSE;
 import static com.yxld.xzs.http.api.API.DELIVERYLIST;
+import static com.yxld.xzs.http.api.API.FINISH_PANDIAN;
+import static com.yxld.xzs.http.api.API.FINISH_YICHANG;
 import static com.yxld.xzs.http.api.API.GETBUMEN;
 import static com.yxld.xzs.http.api.API.GETFUZE;
 import static com.yxld.xzs.http.api.API.GETFUZEREN;
@@ -99,6 +103,7 @@ import static com.yxld.xzs.http.api.API.NIGHTORDERDETAIL;
 import static com.yxld.xzs.http.api.API.NIGHTORDERLIST;
 import static com.yxld.xzs.http.api.API.NIGHTWAREHOUSELIST;
 import static com.yxld.xzs.http.api.API.PANDIAN_DETAIL;
+import static com.yxld.xzs.http.api.API.PANDIAN_YICHANG;
 import static com.yxld.xzs.http.api.API.PEISONGSTATE;
 import static com.yxld.xzs.http.api.API.RIM_CONFIRM_DELIVERY;
 import static com.yxld.xzs.http.api.API.RIM_RIM_ROB;
@@ -349,4 +354,16 @@ public interface HttpApi {
 
     @PUT(CONFIRM_PANDIAN)
     Observable<BaseBack> confirmPandian(@QueryMap Map<String, String> params);
+    @GET(PANDIAN_YICHANG)
+    Observable<PanDianYichangListBean> yiChangPanDianList(@QueryMap Map<String, String> params);
+    @FormUrlEncoded
+    @POST(PANDIAN_YICHANG)
+    Observable<BaseBack> yiChangBeforConfirm(@FieldMap Map<String, String> params);
+    @PUT(CONFIRM_YICHANG_ITEM)
+    Observable<BaseBack> confirmYiChang(@Path("yichangId") String yichangId ,@QueryMap Map<String, String> params);
+    @PUT(FINISH_YICHANG)
+    Observable<BaseBack> finishYiChang(@QueryMap Map<String, String> params);
+    @PUT(FINISH_PANDIAN)
+    Observable<BaseBack> confirmPanDian(@Path("pandianId") String pandianId ,@QueryMap Map<String, String> params);
+
 }

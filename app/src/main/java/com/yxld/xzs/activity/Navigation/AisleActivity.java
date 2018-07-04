@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -150,10 +151,12 @@ public class AisleActivity extends BaseActivity implements BaseQuickAdapter.OnIt
     }
 
     private void getAccessToken() {
-        String url = "https://open.ys7.com/api/lapp/token/get" + "?appKey=" + DemoApplicationLike.AppKey + "&appSecret=8b2ee852dadd753b8138494800b4afe7";
+//        String url = "https://open.ys7.com/api/lapp/token/get" + "?appKey=" + DemoApplicationLike.AppKey + "&appSecret=8b2ee852dadd753b8138494800b4afe7";
+        String url = "https://open.ys7.com/api/lapp/token/get";
+
         FormBody body = new FormBody.Builder()
                 .add("appKey", DemoApplicationLike.AppKey)
-                .add("appSecret", "8b2ee852dadd753b8138494800b4afe7")
+                .add("appSecret", DemoApplicationLike.AppSecret)
                 .build();
         Request request = new Request.Builder().url(url).post(body).build();
         OkHttpClient client = new OkHttpClient.Builder()
@@ -172,7 +175,10 @@ public class AisleActivity extends BaseActivity implements BaseQuickAdapter.OnIt
                 KLog.i(result);
                 Gson gson = new Gson();
                 cxwyCommonToken = gson.fromJson(result, CxwyCommonToken.class);
-                DemoApplicationLike.getOpenSDK().setAccessToken(cxwyCommonToken.getData().getAccessToken());
+                if (null != cxwyCommonToken && "200".equals( cxwyCommonToken.getCode())) {
+                    //Log.e("AisleActivity", "这里 ");
+                    DemoApplicationLike.getOpenSDK().setAccessToken(cxwyCommonToken.getData().getAccessToken());
+                }
             }
         });
 

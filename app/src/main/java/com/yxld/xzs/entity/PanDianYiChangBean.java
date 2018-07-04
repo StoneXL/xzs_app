@@ -20,17 +20,17 @@ public class PanDianYiChangBean {
      * wuziMingcheng : 66
      */
 
-    private int yichangId;
-    private int yichangPandianId;
-    private int yichangKucunId;
-    private int yichangShuliang;
-    private int yichangZhuangtai;
-    private int wuziId;
-    private String wuziBianhao;
-    private String wuziPinpai;
-    private String wuziGuige;
-    private String wuziDanwei;
-    private String wuziMingcheng;
+    private int yichangId;//异常ID
+    private int yichangPandianId;//异常盘点ID
+    private int yichangKucunId;//异常库存ID
+    private int yichangShuliang;//异常数量
+    private int yichangZhuangtai;//异常状态
+    private int wuziId;//物资ID
+    private String wuziBianhao;//物资编号
+    private String wuziPinpai;//物资品牌
+    private String wuziGuige;//物资规格
+    private String wuziDanwei;//物资单位
+    private String wuziMingcheng;//物资名称
 
     public int getYichangId() {
         return yichangId;

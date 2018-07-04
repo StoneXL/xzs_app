@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="库存类别:"/>
+
+        <TextView
+            android:id="@+id/tv_kucun_leibie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="物资条形码:"
+            />
+
+        <TextView
+            android:id="@+id/tv_tiaoxingma"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="物资名称:"
+            />
+
+        <TextView
+            android:id="@+id/tv_mingcheng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="物资规格:"
+            />
+
+        <TextView
+            android:id="@+id/tv_guige"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="物资单位:"
+            />
+
+        <TextView
+            android:id="@+id/tv_danwei"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="物资数量:"
+            />
+
+        <TextView
+            android:id="@+id/tv_shuliang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="盘点后数量:"
+            />
+
+        <TextView
+            android:id="@+id/tv_shuliang_after"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:textColor="@color/black"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:orientation="horizontal"
+        android:paddingLeft="24px"
+        android:paddingRight="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="修改操作:"/>
+
+        <Button
+            android:id="@+id/bt_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_666"
+            android:text="修改"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/color_f0f0f0"/>
+
+</com.zhy.autolayout.AutoLinearLayout>
