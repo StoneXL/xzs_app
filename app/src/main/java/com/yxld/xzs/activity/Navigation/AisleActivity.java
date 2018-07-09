@@ -176,12 +176,10 @@ public class AisleActivity extends BaseActivity implements BaseQuickAdapter.OnIt
                 Gson gson = new Gson();
                 cxwyCommonToken = gson.fromJson(result, CxwyCommonToken.class);
                 if (null != cxwyCommonToken && "200".equals( cxwyCommonToken.getCode())) {
-                    //Log.e("AisleActivity", "这里 ");
                     DemoApplicationLike.getOpenSDK().setAccessToken(cxwyCommonToken.getData().getAccessToken());
                 }
             }
         });
-
     }
 
     private void findAllVcr() {
