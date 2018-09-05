@@ -162,7 +162,7 @@ public class CameraSettingActivity extends BaseActivity implements OnItemClickLi
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 KLog.i("结束设置" + seekBar.getProgress());
-                P2PHandler.getInstance().setVideoVolume(deviceId, devicePwd, seekBar.getProgress());
+                P2PHandler.getInstance().setVideoVolume(deviceId, P2PHandler.getInstance().EntryPassword(devicePwd), seekBar.getProgress());
                 videoSize.setText("(" + seekBar.getProgress() + ")");
                 spUtil.put("videoVolume", seekBar.getProgress());
             }

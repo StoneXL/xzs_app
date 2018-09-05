@@ -42,19 +42,23 @@ public class CameraVideoActivity extends BaseActivity implements CompoundButton.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
         initView();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         deviceId = bundle.getString("deviceId");
         devicePwd = bundle.getString("devicePwd");
 //        P2PHandler.getInstance().setRecordType(deviceId, devicePwd, 0);
+        devicePwd = P2PHandler.getInstance().EntryPassword(devicePwd);
         P2PHandler.getInstance().getNpcSettings(deviceId, devicePwd);
+        switchVideo.setOnCheckedChangeListener(this);
+        switchReverse.setOnCheckedChangeListener(this);
     }
 
     protected void initView() {
         setContentView(R.layout.activity_camera_video);
         ButterKnife.bind(this);
-        EventBus.getDefault().register(this);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         progressDialog.show();
     }

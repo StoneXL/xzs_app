@@ -135,8 +135,8 @@ public class CameraActivity extends BaseMonitorActivity implements View.OnTouchL
 
     private void initData() {
         regFilter();
-        String pwd = P2PHandler.getInstance().EntryPassword(devicePwd);//经过转换后的设备密码
-        P2PHandler.getInstance().call(LoginID, pwd, true, 1, deviceId, "", "", 2, deviceId);
+        devicePwd = P2PHandler.getInstance().EntryPassword(devicePwd);//经过转换后的设备密码
+        P2PHandler.getInstance().call(LoginID, devicePwd, true, 1, deviceId, "", "", 2, deviceId);
     }
 
     private void initView() {
@@ -514,7 +514,7 @@ public class CameraActivity extends BaseMonitorActivity implements View.OnTouchL
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(P2P_ACCEPT)) {
-                progressDialog.hide();
+                progressDialog.dismiss();
                 int[] type = intent.getIntArrayExtra("type");
                 P2PView.type = type[0];
                 scale = type[1];
@@ -527,10 +527,10 @@ public class CameraActivity extends BaseMonitorActivity implements View.OnTouchL
 
             } else if (intent.getAction().equals(P2P_READY)) {
                 KLog.i("P2P_READY...................");
-                progressDialog.hide();
+                progressDialog.dismiss();
                 pView.sendStartBrod();
             } else if (intent.getAction().equals(P2P_REJECT)) {
-                progressDialog.hide();
+                progressDialog.dismiss();
                 Toast.makeText(context, "监控挂断,请重新点击播放进行连接", Toast.LENGTH_SHORT).show();
                 realplayVideoBtn.setEnabled(false);
             }
