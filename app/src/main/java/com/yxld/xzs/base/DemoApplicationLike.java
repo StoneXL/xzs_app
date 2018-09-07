@@ -52,7 +52,7 @@ public class DemoApplicationLike extends Application {
         //极光推送 // TODO: 2017/11/16 取消激光推送
 //        JPushInterface.setDebugMode(true);
 //        JPushInterface.init(getApplication().getApplicationContext());
-        CrashReport.initCrashReport(getInstance(), "cb64c61ed6", true);//bugly的key要换
+        CrashReport.initCrashReport(getInstance(), "61457f3cb3", true);//bugly的key要换
         //FIR 更新  Bug检测
         // FIR.init(getApplication());
 //        UpdateKey.API_TOKEN = "29e937a851bc867e8932c84ef85db3df";

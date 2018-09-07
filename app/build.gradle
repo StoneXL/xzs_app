@@ -28,8 +28,8 @@ android {
         multiDexEnabled true
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 14
-        versionName "2.1.4"
+        versionCode 15
+        versionName "2.1.5"
         //语言资源，只支持中文
         resConfigs "zh"
 //        resValue "string", "updatefun_provider_file_authorities", "com.yxld.xzsupdate.fileprovider"

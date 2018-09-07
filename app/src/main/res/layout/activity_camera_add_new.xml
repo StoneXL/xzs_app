@@ -239,9 +239,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:digits="0123456789"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 android:hint="请输入设备密码"
-                android:inputType="number"
                 android:maxLength="15"
                 android:maxLines="1"
                 android:textSize="40px"/>

@@ -42,9 +42,8 @@
         android:layout_height="150px"
         android:layout_marginLeft="55px"
         android:background="@null"
-        android:inputType="number"
         android:hint="请输入设备密码"
-        android:digits="0123456789"
+        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:maxLength="15"
         android:maxLines="1" />
     <!--<com.yxld.xzs.view.DeleteEditText-->
