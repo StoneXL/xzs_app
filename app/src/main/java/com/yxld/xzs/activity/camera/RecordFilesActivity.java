@@ -63,6 +63,9 @@ public class RecordFilesActivity extends BaseActivity {
         Bundle bundle = intent.getExtras();
         deviceId = bundle.getString("deviceId");
         devicePwd = bundle.getString("devicePwd");
+        // TODO: 2018/9/11 字符串密码转数字密码
+        devicePwd = P2PHandler.getInstance().EntryPassword(devicePwd);
+
     }
 
     protected void initData() {
