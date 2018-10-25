@@ -228,8 +228,8 @@ public class PlayBackActivity extends BasePlayBackActivity {
         super.onConfigurationChanged(newConfig);
         KLog.i("onConfigurationChanged:" + newConfig.orientation);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            LinearLayout.LayoutParams parames = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+            RelativeLayout.LayoutParams parames = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
             pview.setLayoutParams(parames);//调整画布容器宽高(比例)
             toolbarBusiness.setVisibility(View.GONE);
         } else {
