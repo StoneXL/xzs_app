@@ -3,7 +3,6 @@ package com.yxld.xzs.activity.index;
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.FragmentTabHost;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -168,13 +167,19 @@ public class HomeActivity extends BaseActivity {
             public void onTabChanged(String tabId) {
                 if ("首页".equals(tabId)) {
                     toolbar.setTitle("首页");
-                    menuItem.setVisible(true);
+                    if (menuItem != null) {
+                        menuItem.setVisible(true);
+                    }
                 } else if ("工作台".equals(tabId)) {
                     toolbar.setTitle("工作台");
-                    menuItem.setVisible(false);
+                    if (menuItem != null) {
+                        menuItem.setVisible(false);
+                    }
                 } else {
                     toolbar.setTitle("个人中心");
-                    menuItem.setVisible(false);
+                    if (menuItem != null) {
+                        menuItem.setVisible(false);
+                    }
                 }
             }
         });
