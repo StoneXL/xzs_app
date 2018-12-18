@@ -65,7 +65,6 @@ public class SplashActivity extends BaseActivity {
     private int jump = JUMPTOLOGIN;
     private static int permissionState = -1;    //-1表示原始状态,0表示允许,1表示拒绝.
     private boolean timeOver = false;
-
     private CxwyAppVersion mVersion;
     private boolean getLastVersionBack = false;
     private boolean hasUpdate = false;

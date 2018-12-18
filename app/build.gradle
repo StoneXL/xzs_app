@@ -28,7 +28,7 @@ android {
         multiDexEnabled true
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 17
+        versionCode 18
         versionName "2.1.6"
         //语言资源，只支持中文
         resConfigs "zh"

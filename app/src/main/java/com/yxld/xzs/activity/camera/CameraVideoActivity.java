@@ -7,6 +7,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.orhanobut.logger.Logger;
 import com.p2p.core.P2PHandler;
 import com.socks.library.KLog;
 import com.yxld.xzs.R;
@@ -51,8 +52,6 @@ public class CameraVideoActivity extends BaseActivity implements CompoundButton.
 //        P2PHandler.getInstance().setRecordType(deviceId, devicePwd, 0);
         devicePwd = P2PHandler.getInstance().EntryPassword(devicePwd);
         P2PHandler.getInstance().getNpcSettings(deviceId, devicePwd);
-        switchVideo.setOnCheckedChangeListener(this);
-        switchReverse.setOnCheckedChangeListener(this);
     }
 
     protected void initView() {
@@ -65,6 +64,7 @@ public class CameraVideoActivity extends BaseActivity implements CompoundButton.
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        Logger.e("------------"+buttonView.getId()+isChecked);
         switch (buttonView.getId()) {
             case R.id.switch_video:
                 if (isChecked) {
